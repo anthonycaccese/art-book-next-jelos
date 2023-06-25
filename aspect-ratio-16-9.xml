@@ -1,10 +1,16 @@
 <theme>
    <formatVersion>7</formatVersion>
 
-   <view name="system">
-      <text name="logoText">
-         <fontSize>0.15</fontSize>
+   <view name="screen">
+      <text name="clock">
+         <pos>0.014064697609001 0.98125</pos><!-- 20 785 -->
       </text>
+      <batteryIndicator name="batteryIndicator">
+         <size>0.990154711673699 0.03375</size><!-- 1408 27 -->
+      </batteryIndicator>
+   </view>
+
+   <view name="system">
       <image ifSubset="system-view:centered" name="system-art-mask" extra="true">
          <path>./_inc/images/system-art-mask-16-9.png</path>
       </image>
@@ -19,26 +25,7 @@
       </image>
       <text name="logoText">
          <size>0.29535864978903 0.1</size><!-- 420 80 -->
-         <fontSize>0.05</fontSize>
       </text>
-   </view>
-
-   <view name="basic">
-      <image name="logo">
-         <pos>0.5 0.13125</pos><!-- 50% 105 -->
-      </image>
-      <text name="logoText">
-         <pos>0.5 0.13125</pos><!-- 50% 105 -->
-      </text>
-      <textlist name="gamelist">
-         <origin>0.5 1</origin>
-         <pos>0.5 0.8875</pos><!-- 50% 710 -->
-         <size>0.7 0.63</size><!-- - 504 -->
-         <alignment>center</alignment>
-      </textlist>
-      <image name="gamelist-background" extra="true">
-         <size>1 1</size>
-      </image>
    </view>
 
    <view name="detailed,video">
@@ -47,7 +34,6 @@
       </image>
       <text name="logoText">
          <pos>0.182841068917018 0.13125</pos><!-- 260 105 -->
-         <fontSize>0.05</fontSize>
       </text>
       <textlist name="gamelist">
          <pos>0.035161744022504 0.8875</pos><!-- 50 710 -->

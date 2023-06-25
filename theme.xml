@@ -65,8 +65,6 @@ license:       creative commons CC-BY-NC-SA
       </controllerActivity>
       <text name="clock">
          <origin>0 1</origin>
-         <pos ifSubset="aspect-ratio:16-9">0.014064697609001 0.98125</pos><!-- 20 785 -->
-         <pos ifSubset="aspect-ratio:16-10">0.015625 0.98125</pos><!-- 20 785 -->
          <size>0 0.02</size><!-- 0 16 -->
          <fontPath>${fontBold}</fontPath>
          <fontSize>0.02</fontSize><!-- 16 -->
@@ -74,8 +72,6 @@ license:       creative commons CC-BY-NC-SA
       </text>
       <batteryIndicator name="batteryIndicator">
          <pos>0 0.9475</pos><!-- 0 758 -->
-         <size ifSubset="aspect-ratio:16-9">0.990154711673699 0.03375</size><!-- 1408 27 -->
-         <size ifSubset="aspect-ratio:16-10">0.9890625 0.03375</size><!-- 1266 27 -->
          <color>FFFFFF55</color>
          <itemSpacing>0</itemSpacing>
          <full>./_inc/images/battery-100-vertical.svg</full>
@@ -131,6 +127,7 @@ license:       creative commons CC-BY-NC-SA
       </image>
       <text name="logoText">
          <color>${systemLogoColor}</color>
+         <fontSize>0.15</fontSize>
       </text>
       <carousel name="systemcarousel">
          <origin>0 0</origin>
@@ -215,6 +212,7 @@ license:       creative commons CC-BY-NC-SA
       <text name="logoText">
          <origin>0.5 0.5</origin>
          <color>${gamelistListLogoColor}</color>
+         <fontSize>0.05</fontSize>
          <zIndex>5</zIndex>
       </text>
       <textlist name="gamelist">
@@ -240,6 +238,24 @@ license:       creative commons CC-BY-NC-SA
       <image name="background" extra="true">
          <color>${backgroundColor}</color>
          <zIndex>1</zIndex>
+      </image>
+   </view>
+
+   <view name="basic">
+      <image name="logo">
+         <pos>0.5 0.13125</pos><!-- 50% 105 -->
+      </image>
+      <text name="logoText">
+         <pos>0.5 0.13125</pos><!-- 50% 105 -->
+      </text>
+      <textlist name="gamelist">
+         <origin>0.5 1</origin>
+         <pos>0.5 0.8875</pos><!-- 50% 710 -->
+         <size>0.7 0.63</size><!-- - 504 -->
+         <alignment>center</alignment>
+      </textlist>
+      <image name="gamelist-background" extra="true">
+         <size>1 1</size>
       </image>
    </view>
 
