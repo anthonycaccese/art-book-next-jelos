@@ -325,7 +325,6 @@ license:       creative commons CC-BY-NC-SA
          <fontSize>0.035</fontSize>
          <color>ffffff77</color>
          <separatorColor>ffffff11</separatorColor>
-         <selectorColor>ffffff33</selectorColor>
          <selectedColor>ffffff</selectedColor>
       </menuText>
       <menuTextSmall name="menutextsmall">
