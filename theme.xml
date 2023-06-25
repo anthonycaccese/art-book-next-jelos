@@ -1,0 +1,363 @@
+<!--
+theme name:    Art Book Next (JELOS Edition)
+author:        Anthony Caccese
+license:       creative commons CC-BY-NC-SA
+-->
+<theme defaultTransition="instant">
+   <formatVersion>7</formatVersion>
+
+   <!-- Variables -->
+   <variables>
+      <fontBold>./_inc/fonts/Oxygen-Bold.ttf</fontBold>
+      <fontLight>./_inc/fonts/Oxygen-Light.ttf</fontLight>
+      <fontRegular>./_inc/fonts/Oxygen-Regular.ttf</fontRegular>
+      <fontLogo>./_inc/fonts/ChangaOne-Italic.ttf</fontLogo>
+      <spacerImage>./_inc/images/space.png</spacerImage>
+   </variables>
+
+   <!-- Aspect Ratio -->
+   <subset name="aspect-ratio" displayName="Aspect Ratio">
+      <include if="${screen.ratio} == '16/9'" name="16-9" displayName="16:9" /><!-- Based On 1422x800 -->
+      <include if="${screen.ratio} == '16/10'" name="16-10" displayName="16:10" /><!-- Based On 1280x800 -->
+   </subset>
+
+   <!-- Color Scheme -->
+   <subset name="color-scheme" displayName="Color Scheme">
+      <include name="art-book-next" displayName="Art Book Next" />
+      <include name="art-book" displayName="Art Book" />
+      <include name="steam-os" displayName="Steam OS" />
+      <include name="snes" displayName="SNES" />
+      <include name="famicom" displayName="Famicom" />
+      <include name="black" displayName="Black" />
+      <include name="grayscale" displayName="Grayscale" />
+   </subset>
+   <include>./colors.xml</include>
+
+   <!-- System View Style -->
+   <subset name="system-view" displayName="System View Style">
+      <include name="centered" displayName="Centered Artwork" />
+      <include name="multi" displayName="Multi Artwork" />
+      <include name="no-artwork" displayName="No Artwork" />
+   </subset>
+
+   <!-- Gamelist View Style -->
+   <subset name="gamelist-layout" displayName="Gamelist View Style">
+      <include name="metadata-on" displayName="Metadata On" />
+      <include name="metadata-off" displayName="Metadata Off" />
+      <include name="metadata-off-immersive" displayName="Metadata Off (Immersive)" />
+   </subset>
+
+   <view name="screen">
+      <controllerActivity name="controllerActivity">
+         <visible>false</visible>
+      </controllerActivity>
+      <text name="clock">
+         <origin>0 1</origin>
+         <pos ifSubset="aspect-ratio:16-9">0.014064697609001 0.98125</pos><!-- 20 785 -->
+         <pos ifSubset="aspect-ratio:16-10">0.015625 0.98125</pos><!-- 20 785 -->
+         <size>0 0.02</size><!-- 0 16 -->
+         <fontPath>${fontBold}</fontPath>
+         <fontSize>0.02</fontSize><!-- 16 -->
+         <color>FFFFFF55</color>
+      </text>
+      <batteryIndicator name="batteryIndicator">
+         <pos>0 0.9475</pos><!-- 0 758 -->
+         <size ifSubset="aspect-ratio:16-9">0.990154711673699 0.03375</size><!-- 1408 27 -->
+         <size ifSubset="aspect-ratio:16-10">0.9890625 0.03375</size><!-- 1266 27 -->
+         <color>FFFFFF55</color>
+         <itemSpacing>0</itemSpacing>
+         <full>./_inc/images/battery-100-vertical.svg</full>
+         <at75>./_inc/images/battery-75-vertical.svg</at75>
+         <at50>./_inc/images/battery-50-vertical.svg</at50>
+         <at25>./_inc/images/battery-25-vertical.svg</at25>
+         <empty>./_inc/images/battery-0-vertical.svg</empty>
+         <incharge>./_inc/images/battery-charging-vertical.svg</incharge>
+         <networkIcon>./_inc/images/wifi-vertical.svg</networkIcon>
+      </batteryIndicator>
+   </view>
+
+   <view name="system,basic,detailed,video">
+      <image name="logo">
+         <path>./_inc/systems/${system.theme}.svg</path>
+      </image>
+      <text name="logoText">
+         <fontPath>${fontLogo}</fontPath>
+         <forceUppercase>true</forceUppercase>
+         <lineSpacing>1</lineSpacing>
+         <alignment>center</alignment>
+      </text>
+      <helpsystem name="help">
+         <origin>0.5 1</origin>
+         <pos>0.5 0.975</pos><!-- 50% 780 -->
+         <fontPath>${fontLight}</fontPath>
+         <fontSize>0.02</fontSize><!-- 16 -->
+         <textColor>FFFFFF55</textColor>
+         <iconColor>FFFFFF55</iconColor>
+      </helpsystem>
+      <image name="help-background" extra="true">
+         <origin>0 1</origin>
+         <pos>0 1</pos>
+         <size>1 0.0675</size><!-- 100% 54 -->
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <color>000000</color>
+         <zIndex>5</zIndex>
+      </image>
+      <image name="background" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <zIndex>0</zIndex>
+      </image>
+   </view>
+
+   <view name="system">
+      <image name="logo">
+         <color>${systemLogoColor}</color>
+      </image>
+      <text name="logoText">
+         <color>${systemLogoColor}</color>
+      </text>
+      <carousel name="systemcarousel">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <color>00000000</color>
+         <type>horizontal</type>
+         <logoScale>2</logoScale>
+         <logoSize>0.25 0.15</logoSize>
+         <maxLogoCount>2</maxLogoCount>
+      </carousel>
+      <text name="systemInfo">
+         <pos>1 1</pos>
+      </text>
+      <!-- System View Mask: Centered Artwork -->
+      <image ifSubset="system-view:centered" name="system-art-mask" extra="true">
+         <origin>0.5 0</origin>
+         <pos>0.5 0</pos>
+         <size>0 1</size>
+         <color>${systemMaskColor}</color>
+         <zIndex>4</zIndex>
+      </image>
+      <image ifSubset="system-view:centered" name="system-art-fade" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <color>${systemArtFade}</color>
+         <zIndex>3</zIndex>
+      </image>
+      <image ifSubset="system-view:centered" name="system-art" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos>
+         <size>0 1</size>
+         <path>./_inc/systems/${system.theme}.png</path>
+         <color>${systemArtColor}</color>
+         <zIndex>2</zIndex>
+      </image>
+      <!-- System View Mask: Multi Artwork -->
+      <image ifSubset="system-view:multi" name="logo">
+         <path>./_inc/images/background-missing.png</path>
+         <path>./_inc/systems/${system.theme}.png</path>
+         <color>ffffffcc</color>
+      </image>
+      <carousel ifSubset="system-view:multi" name="systemcarousel">
+         <size>1 1</size>
+         <logoScale>1</logoScale>
+         <logoSize>1 1</logoSize>
+         <zIndex>3</zIndex>
+      </carousel>
+      <image ifSubset="system-view:multi" name="system-art" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos>
+         <maxSize>0.5 0.3</maxSize>
+         <color>ffffff</color>
+         <path>./_inc/systems/${system.theme}.svg</path>
+         <zIndex>50</zIndex>
+      </image>
+      <!-- System View: No Artwork -->
+      <image ifSubset="system-view:no-artwork" name="system-art" extra="true">
+         <origin>0.5 0</origin>
+         <pos>0.5 0</pos>
+         <size>1 1</size>
+         <tile>true</tile>
+         <color>${systemBackgroundColor}</color>
+         <path>${spacerImage}</path>
+         <zIndex>2</zIndex>
+      </image>
+      <image name="background" extra="true">
+         <color>${systemBackgroundColor}</color>
+      </image>
+   </view>
+
+   <view name="basic,detailed,video">
+      <image name="logo">
+         <origin>0.5 0.5</origin>
+         <color>${gamelistListLogoColor}</color>
+         <zIndex>5</zIndex>
+      </image>
+      <text name="logoText">
+         <origin>0.5 0.5</origin>
+         <color>${gamelistListLogoColor}</color>
+         <zIndex>5</zIndex>
+      </text>
+      <textlist name="gamelist">
+         <origin>0 1</origin>
+         <alignment>left</alignment>
+         <fontPath>${fontBold}</fontPath>
+         <fontSize>0.038</fontSize><!-- 24 -->
+         <lineSpacing>1.5</lineSpacing><!-- 6/6 -->
+         <selectorColor>00000000</selectorColor>
+         <selectedColor>${gamelistListTextlistSelectedColor}</selectedColor>
+         <primaryColor>${gamelistListTextlistUnselectedColor}</primaryColor>
+         <secondaryColor>${gamelistListTextlistUnselectedColor}</secondaryColor>
+         <scrollSound>./_inc/sounds/scroll.wav</scrollSound>
+         <zIndex>5</zIndex>
+      </textlist>
+      <image name="gamelist-background" extra="true">
+         <origin>0 0</origin>
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <color>${gamelistListTextlistBackgroundColor}</color>
+         <zIndex>4</zIndex>
+      </image>
+      <image name="background" extra="true">
+         <color>${backgroundColor}</color>
+         <zIndex>1</zIndex>
+      </image>
+   </view>
+
+   <view name="detailed,video">
+      <text name="md_lbl_rating,md_lbl_developer,md_developer,md_lbl_publisher,md_publisher,md_lbl_playcount,md_playcount,md_lbl_lastplayed,md_lbl_players,md_players,md_lbl_releasedate,md_lbl_genre,md_genre,md_description,md_name,md_lbl_gametime,md_gametime">
+         <pos>1 1</pos>
+         <fontPath>${fontBold}</fontPath>
+         <alignment>left</alignment>
+         <color>${gamelistListMetadataColor}</color>
+         <fontSize>0.02</fontSize><!-- 16 -->
+      </text>
+      <text name="md_genre">
+         <fontSize>0.025</fontSize><!-- 20 -->
+      </text>
+      <text name="md_description">
+         <origin>0 1</origin>
+         <fontPath>${fontRegular}</fontPath>
+         <color>${gamelistListDescriptionColor}</color>
+         <fontSize>0.03</fontSize><!-- 24 -->
+      </text>
+      <datetime name="md_releasedate,md_lastplayed">
+         <pos>1 1</pos>
+         <fontPath>${fontBold}</fontPath>
+         <color>${gamelistListMetadataColor}</color>
+         <alignment>left</alignment>
+         <fontSize>0.02</fontSize><!-- 16 -->
+      </datetime>
+      <rating name="md_rating">
+         <pos>1 1</pos>
+         <color>${gamelistListRatingColor}</color>
+         <filledPath>./_inc/images/icon-star-filled.svg</filledPath>
+         <unfilledPath>./_inc/images/icon-star-unfilled.svg</unfilledPath>
+         <size>0 0.025</size><!-- x 20 -->
+      </rating>
+      <image name="md_releasedate_icon,md_players_icon,md_developer_icon,md_publisher_icon" extra="true">
+         <pos>1 1</pos>
+         <color>${gamelistListMetadataIconColor}</color>
+         <size>0 0.025</size><!-- x 20 -->
+      </image>
+      <image name="md_releasedate_icon">
+         <path>./_inc/images/icon-release-date.svg</path>
+      </image>
+      <image name="md_players_icon">
+         <path>./_inc/images/icon-players.svg</path>
+      </image>
+      <image name="md_developer_icon">
+         <path>./_inc/images/icon-developer.svg</path>
+      </image>
+      <image name="md_publisher_icon">
+         <path>./_inc/images/icon-publisher.svg</path>
+      </image>
+      <image ifSubset="gamelist-layout:metadata-on|metadata-off" name="game-metadata-background" extra="true">
+         <origin>0 0</origin>
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <color>${gamelistListMetadataBackgroundColor}</color>
+         <zIndex>2</zIndex>
+      </image>
+   </view>
+
+   <view name="detailed">
+      <image name="md_image">
+         <origin>0.5 0.5</origin>
+         <zIndex>3</zIndex>
+      </image>
+   </view>
+
+   <view name="video">
+      <video name="md_video">
+         <origin>0.5 0.5</origin>
+         <delay>2</delay>
+         <delay ifSubset="gamelist-layout:metadata-off-immersive">1</delay>
+         <effect>none</effect>
+         <showSnapshotDelay>true</showSnapshotDelay>
+         <showSnapshotNoVideo>true</showSnapshotNoVideo>
+         <showSnapshotDelay ifSubset="gamelist-layout:metadata-off-immersive">false</showSnapshotDelay>
+         <showSnapshotNoVideo ifSubset="gamelist-layout:metadata-off-immersive">false</showSnapshotNoVideo>
+         <color ifSubset="gamelist-layout:metadata-off-immersive">FFFFFF77</color>
+         <zIndex>3</zIndex>
+      </video>
+   </view>
+
+   <view name="menu">
+      <menuText name="menutitle">
+         <fontPath>${fontBold}</fontPath>
+         <fontSize>0.04</fontSize>
+         <color>ffffff</color>
+      </menuText>
+      <menuText name="menufooter">
+         <fontPath>${fontLight}</fontPath>
+         <fontSize>0.025</fontSize>
+         <color>ffffff77</color>
+      </menuText>
+      <menuText name="menutext">
+         <fontPath>${fontRegular}</fontPath>
+         <fontSize>0.035</fontSize>
+         <color>ffffff77</color>
+         <separatorColor>ffffff11</separatorColor>
+         <selectorColor>ffffff33</selectorColor>
+         <selectedColor>ffffff</selectedColor>
+      </menuText>
+      <menuTextSmall name="menutextsmall">
+         <fontPath>${fontRegular}</fontPath>
+         <fontSize>0.0325</fontSize>
+         <color>ffffff77</color>
+      </menuTextSmall>
+      <menuGroup name="menugroup">
+         <fontPath>${fontBold}</fontPath>
+         <fontSize>0.0325</fontSize>
+         <color>ffffff</color>
+         <separatorColor>ffffff99</separatorColor>
+         <backgroundColor>00000000</backgroundColor>
+         <lineSpacing>2.5</lineSpacing>
+      </menuGroup>
+      <menuTextEdit name="menutextedit">
+         <inactive>./_inc/images/menu-textinput.png</inactive>
+         <active>./_inc/images/menu-textinput-active.png</active>
+      </menuTextEdit>
+      <menuBackground name="menubg">
+         <color>${menuBackgroundColor}</color>
+         <cornerSize>32 32</cornerSize>
+         <path>./_inc/images/menu-frame.png</path>
+      </menuBackground>
+      <menuButton name="menubutton">
+         <path>./_inc/images/menu-button.png</path>
+         <filledPath>./_inc/images/menu-button-filled.png</filledPath>
+      </menuButton>
+   </view>
+
+   <!-- Aspect Ratio -->
+   <include ifSubset="aspect-ratio:16-9">./aspect-ratio-16-9.xml</include>
+   <include ifSubset="aspect-ratio:16-10">./aspect-ratio-16-10.xml</include>
+
+</theme>
