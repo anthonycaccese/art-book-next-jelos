@@ -15,7 +15,7 @@
          <path>./_inc/images/system-art-mask-4-3.png</path>
       </image>
       <carousel ifSubset="system-view:multi" name="systemcarousel">
-         <maxLogoCount>5</maxLogoCount>
+         <maxLogoCount>4</maxLogoCount>
       </carousel>
    </view>
 

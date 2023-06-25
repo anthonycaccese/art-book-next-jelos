@@ -102,7 +102,7 @@ license:       creative commons CC-BY-NC-SA
          <textColor>FFFFFF55</textColor>
          <iconColor>FFFFFF55</iconColor>
       </helpsystem>
-      <image name="help-background" extra="true">
+      <image name="help-background" extra="static">
          <origin>0 1</origin>
          <pos>0 1</pos>
          <size>1 0.0675</size><!-- 100% 54 -->
