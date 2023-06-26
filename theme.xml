@@ -269,6 +269,7 @@ license:       creative commons CC-BY-NC-SA
       </text>
       <text name="md_genre">
          <fontSize>0.025</fontSize><!-- 20 -->
+         <size>0 0.025</size><!-- x 20 -->
       </text>
       <text name="md_description">
          <origin>0 1</origin>
