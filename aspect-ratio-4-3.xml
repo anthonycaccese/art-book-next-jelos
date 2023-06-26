@@ -44,78 +44,56 @@
       </image>
       <image name="game-metadata-background" extra="true">
          <pos>0.487347703842549 0</pos><!-- 520 0 -->
-         <size>0.512652296157451 1</size><!-- 547 720-->
+         <size>0.512652296157451 1</size><!-- 547 800-->
       </image>
    </view>
 
    <view ifSubset="gamelist-layout:metadata-on" name="detailed,video">
-      <text name="md_genre">
-         <pos>0.453125 0.6625</pos><!-- 580 530 -->
-      </text>
       <text name="md_description">
-         <pos>0.453125 0.8875</pos><!-- 580 710 -->
-         <size>0.3515625 0.18</size><!-- 450 144 -->
+         <pos>0.543580131208997 0.8875</pos><!-- 580 710 -->
+         <size>0.400187441424555 0.18</size><!-- 427 144 -->
       </text>
       <rating name="md_rating">
-         <pos>0.85 0.6625</pos><!-- 1088 530 -->
+         <origin>0.5 0.5</origin>
+         <pos>0.743673851921275 0.57</pos><!-- 793.5 456 -->
+         <size>0 0.0375</size><!-- x 30 -->
       </rating>
-      <image name="md_releasedate_icon">
-         <pos>0.85 0.7125</pos><!-- 1088 570 -->
-      </image>
       <datetime name="md_releasedate">
-         <pos>0.8734375 0.7125</pos><!-- 1118 570 -->
-         <size>0.0875 0.025</size><!-- 112 20 -->
+         <origin>0.5 0.5</origin>
+         <pos>0.743673851921275 0.635</pos><!-- 793.5 508 -->
+         <size>0.28116213683224 0.025</size><!-- 300 20 -->
+         <fontSize>0.025</fontSize><!-- 20 -->
+         <alignment>center</alignment>
       </datetime>
-      <image name="md_players_icon">
-         <pos>0.85 0.7625</pos><!-- 1088 610 -->
-      </image>
-      <text name="md_players">
-         <pos>0.8734375 0.7625</pos><!-- 1118 610 -->
-         <size>0.0875 0.025</size><!-- 112 20 -->
-      </text>
-      <image name="md_developer_icon">
-         <pos>0.85 0.8125</pos><!-- 1088 650 -->
-      </image>
-      <text name="md_developer">
-         <pos>0.8734375 0.8125</pos><!-- 1118 650 -->
-         <size>0.0875 0.025</size><!-- 112 20 -->
-      </text>
-      <image name="md_publisher_icon">
-         <pos>0.85 0.8625</pos><!-- 1088 690 -->
-      </image>
-      <text name="md_publisher">
-         <pos>0.8734375 0.8625</pos><!-- 1118 690 -->
-         <size>0.0875 0.025</size><!-- 112 20 -->
-      </text>
    </view>
    <view ifSubset="gamelist-layout:metadata-on" name="detailed">
       <image name="md_image">
-         <pos>0.703125 0.33125</pos><!-- 900 265 -->
-         <maxSize>0.515625 0.5375</maxSize><!-- 660 430 -->
+         <pos>0.743673851921275 0.27375</pos><!-- 793.5 219 -->
+         <maxSize>0.418931583880037 0.4225</maxSize><!-- 447 338 -->
       </image>
    </view>
    <view ifSubset="gamelist-layout:metadata-on" name="video">
       <video name="md_video">
-         <pos>0.703125 0.33125</pos><!-- 900 265 -->
-         <maxSize>0.515625 0.5375</maxSize><!-- 660 430 -->
+         <pos>0.743673851921275 0.27375</pos><!-- 793.5 219 -->
+         <maxSize>0.418931583880037 0.4225</maxSize><!-- 447 338 -->
       </video>
    </view>
 
    <view ifSubset="gamelist-layout:metadata-off|metadata-off-immersive" name="detailed">
       <image name="md_image">
-         <pos>0.703125 0.46875</pos><!-- 900 375 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off">0.515625 0.875</maxSize><!-- 660 700 -->
+         <pos>0.743673851921275 0.475</pos><!-- 793.5 380 -->
+         <maxSize ifSubset="gamelist-layout:metadata-off">0.418931583880037 0.825</maxSize><!-- 447 660 -->
          <maxSize ifSubset="gamelist-layout:metadata-off-immersive">1.0421875 1.1725</maxSize><!-- 1334 938 -->
       </image>
    </view>
    <view ifSubset="gamelist-layout:metadata-off|metadata-off-immersive" name="video">
       <image ifSubset="gamelist-layout:metadata-off-immersive" name="md_marquee">
-         <pos>0.703125 0.46875</pos><!-- 900 375 -->
-         <maxSize>0.421792618629174 0.75</maxSize><!-- 540 600 -->
+         <pos>0.743673851921275 0.475</pos><!-- 793.5 380 -->
+         <maxSize>0.418931583880037 0.825</maxSize><!-- 447 660 -->
       </image>
       <video name="md_video">
-         <pos>0.703125 0.46875</pos><!-- 900 375 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off">0.515625 0.875</maxSize><!-- 660 700 -->
+         <pos>0.743673851921275 0.475</pos><!-- 793.5 380 -->
+         <maxSize ifSubset="gamelist-layout:metadata-off">0.418931583880037 0.825</maxSize><!-- 447 660 -->
          <maxSize ifSubset="gamelist-layout:metadata-off-immersive">1.0421875 1.1725</maxSize><!-- 1334 938 -->
       </video>
    </view>
