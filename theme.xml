@@ -17,6 +17,7 @@ license:       creative commons CC-BY-NC-SA
 
    <!-- Aspect Ratio -->
    <subset name="aspect-ratio" displayName="Aspect Ratio">
+      <include if="${screen.width} == '640' && ${screen.height} == '480'" name="4-3-smallscreen" displayName="4:3 (Small Screen)" /><!-- Based On 640x480 -->
       <include if="${screen.width} == '1920' && ${screen.height} == '1152'" name="5-3" displayName="5:3 (Forced)" /><!-- Based On 1333x800 -->
       <include if="${screen.width} == '1800' && ${screen.height} == '1080'" name="5-3" displayName="5:3 (Forced)" /><!-- Based On 1333x800 -->
       <include if="${screen.width} == '1200' && ${screen.height} == '720'" name="5-3" displayName="5:3 (Forced)" /><!-- Based On 1333x800 -->
@@ -384,6 +385,7 @@ license:       creative commons CC-BY-NC-SA
    <include ifSubset="aspect-ratio:16-9">./aspect-ratio-16-9.xml</include>
    <include ifSubset="aspect-ratio:16-10">./aspect-ratio-16-10.xml</include>
    <include ifSubset="aspect-ratio:4-3|5-4">./aspect-ratio-4-3.xml</include>
+   <include ifSubset="aspect-ratio:4-3-smallscreen">./aspect-ratio-4-3-smallscreen.xml</include>
    <include ifSubset="aspect-ratio:3-2">./aspect-ratio-3-2.xml</include>
    <include ifSubset="aspect-ratio:5-3">./aspect-ratio-5-3.xml</include>
 
