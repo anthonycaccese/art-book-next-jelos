@@ -100,31 +100,31 @@
    <view ifSubset="gamelist-layout:metadata-on" name="detailed">
       <image name="md_image">
          <pos>0.75 0.322916666666667</pos><!-- 480 155 -->
-         <maxSize>0.3828125 0.510416666666667</maxSize><!-- 245 245 -->
+         <maxSize>0.40625 0.520833333333333</maxSize><!-- 260 250 -->
       </image>
    </view>
    <view ifSubset="gamelist-layout:metadata-on" name="video">
       <video name="md_video">
          <pos>0.75 0.322916666666667</pos><!-- 480 155 -->
-         <maxSize>0.3828125 0.510416666666667</maxSize><!-- 245 245 -->
+         <maxSize>0.40625 0.520833333333333</maxSize><!-- 260 250 -->
       </video>
    </view>
 
    <view ifSubset="gamelist-layout:metadata-off|metadata-off-immersive" name="detailed">
       <image name="md_image">
          <pos>0.75 0.5</pos><!-- 480 240 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off">0.390625 0.895833333333333</maxSize><!-- 250 430 -->
+         <maxSize ifSubset="gamelist-layout:metadata-off">0.40625 0.895833333333333</maxSize><!-- 260 430 -->
          <maxSize ifSubset="gamelist-layout:metadata-off-immersive">1.1 1.1</maxSize>
       </image>
    </view>
    <view ifSubset="gamelist-layout:metadata-off|metadata-off-immersive" name="video">
       <image ifSubset="gamelist-layout:metadata-off-immersive" name="md_marquee">
          <pos>0.75 0.5</pos><!-- 480 240 -->
-         <maxSize>0.390625 0.895833333333333</maxSize><!-- 250 430 -->
+         <maxSize>0.40625 0.895833333333333</maxSize><!-- 260 430 -->
       </image>
       <video name="md_video">
          <pos>0.75 0.5</pos><!-- 480 240 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off">0.390625 0.895833333333333</maxSize><!-- 250 430 -->
+         <maxSize ifSubset="gamelist-layout:metadata-off">0.40625 0.895833333333333</maxSize><!-- 260 430 -->
          <maxSize ifSubset="gamelist-layout:metadata-off-immersive">1.1 1.1</maxSize>
       </video>
    </view>

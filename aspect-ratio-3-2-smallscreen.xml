@@ -100,13 +100,13 @@
    <view ifSubset="gamelist-layout:metadata-on" name="detailed">
       <image name="md_image">
          <pos>0.722222222222222 0.322916666666667</pos><!-- 520 155 -->
-         <maxSize>0.472222222222222 0.510416666666667</maxSize><!-- 340 245 -->
+         <maxSize>0.472222222222222 0.520833333333333</maxSize><!-- 340 250 -->
       </image>
    </view>
    <view ifSubset="gamelist-layout:metadata-on" name="video">
       <video name="md_video">
          <pos>0.722222222222222 0.322916666666667</pos><!-- 520 155 -->
-         <maxSize>0.472222222222222 0.510416666666667</maxSize><!-- 340 245 -->
+         <maxSize>0.472222222222222 0.520833333333333</maxSize><!-- 340 250 -->
       </video>
    </view>
 
