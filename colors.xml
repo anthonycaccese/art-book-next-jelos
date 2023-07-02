@@ -23,7 +23,7 @@
       <helpIconColor>ffffff66</helpIconColor>
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
-      <menuBackgroundColor>222222</menuBackgroundColor>
+      <menuBackgroundColor>111111</menuBackgroundColor>
    </variables>
    <variables ifSubset="color-scheme:art-book">
       <backgroundColor>000000</backgroundColor>
@@ -48,7 +48,7 @@
       <helpIconColor>ffffff66</helpIconColor>
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
-      <menuBackgroundColor>222222</menuBackgroundColor>
+      <menuBackgroundColor>111111</menuBackgroundColor>
    </variables>
    <variables ifSubset="color-scheme:steam-os">
       <backgroundColor>000000</backgroundColor>
@@ -148,7 +148,7 @@
       <helpIconColor>ffffff66</helpIconColor>
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
-      <menuBackgroundColor>222222</menuBackgroundColor>
+      <menuBackgroundColor>111111</menuBackgroundColor>
    </variables>
    <variables ifSubset="color-scheme:grayscale">
       <backgroundColor>000000</backgroundColor>

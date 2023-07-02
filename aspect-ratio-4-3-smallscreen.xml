@@ -59,10 +59,10 @@
       </text>
       <textlist name="gamelist">
          <origin>0 0</origin>
-         <pos>0.0546875 0.283333333333333</pos><!-- 35 136 -->
-         <size>0.390625 0.666666666666667</size><!-- 250 320 -->
-         <fontSize>0.033333333333333</fontSize><!-- 16 -->
-         <lineSpacing>1.8</lineSpacing>
+         <pos>0.0546875 0.24</pos><!-- 35 134 -->
+         <size>0.390625 0.725</size><!-- 250 324 -->
+         <fontSize>0.04</fontSize>
+         <lineSpacing>1.585</lineSpacing>
       </textlist>
       <image name="gamelist-background" extra="true">
          <size>0.5 1</size><!-- 320 480 -->

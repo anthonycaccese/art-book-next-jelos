@@ -17,14 +17,11 @@ license:       creative commons CC-BY-NC-SA
 
    <!-- Aspect Ratio -->
    <subset name="aspect-ratio" displayName="Aspect Ratio">
-      <include if="${screen.width} == '1920' && ${screen.height} == '1152'" name="5-3" displayName="5:3 (Forced)" /><!-- Based On 1333x800 -->
-      <include if="${screen.width} == '1800' && ${screen.height} == '1080'" name="5-3" displayName="5:3 (Forced)" /><!-- Based On 1333x800 -->
-      <include if="${screen.width} == '1200' && ${screen.height} == '720'" name="5-3" displayName="5:3 (Forced)" /><!-- Based On 1333x800 -->
-      <include if="${screen.width} == '800' && ${screen.height} == '480'" name="5-3" displayName="5:3 (Forced)" /><!-- Based On 1333x800 -->
+      <include if="{screen.ratio} == '4/3'" name="4-3" displayName="4:3 (Detected)" /><!-- Based On 640x480 -->
       <include if="{screen.ratio} == '16/9'" name="16-9" displayName="16:9 (Detected)" /><!-- Based On 1422x800 -->
       <include if="{screen.ratio} == '16/10'" name="16-10" displayName="16:10 (Detected)" /><!-- Based On 1280x800 -->
-      <include if="{screen.ratio} == '4/3'" name="4-3" displayName="4:3 (Detected)" /><!-- Based On 640x480 -->
       <include if="{screen.ratio} == '3/2'" name="3-2" displayName="3:2 (Detected)" /><!-- Based On 1200x800 -->
+      <include if="${screen.width} == '1920' && ${screen.height} == '1152'" name="5-3" displayName="5:3 (Forced)" /><!-- Based On 1333x800 -->
       <include name="16-9" displayName="16:9" />
       <include name="16-10" displayName="16:10" />
       <include name="4-3" displayName="4:3" />
@@ -341,7 +338,7 @@ license:       creative commons CC-BY-NC-SA
    <view name="menu">
       <menuText name="menutitle">
          <fontPath>${fontBold}</fontPath>
-         <fontSize>0.04</fontSize>
+         <fontSize>0.03</fontSize>
          <color>ffffff</color>
       </menuText>
       <menuText name="menufooter">
@@ -350,19 +347,19 @@ license:       creative commons CC-BY-NC-SA
          <color>ffffff77</color>
       </menuText>
       <menuText name="menutext">
-         <fontPath>${fontRegular}</fontPath>
+         <fontPath>${fontBold}</fontPath>
          <fontSize>0.035</fontSize>
          <color>ffffff77</color>
          <separatorColor>ffffff11</separatorColor>
          <selectedColor>ffffff</selectedColor>
       </menuText>
       <menuTextSmall name="menutextsmall">
-         <fontPath>${fontRegular}</fontPath>
+         <fontPath>${fontBold}</fontPath>
          <fontSize>0.0325</fontSize>
          <color>ffffff77</color>
       </menuTextSmall>
       <menuGroup name="menugroup">
-         <fontPath>${fontBold}</fontPath>
+         <fontPath>${fontRegular}</fontPath>
          <fontSize>0.0325</fontSize>
          <color>ffffff</color>
          <separatorColor>ffffff99</separatorColor>
