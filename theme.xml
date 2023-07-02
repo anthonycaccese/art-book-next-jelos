@@ -379,10 +379,8 @@ license:       creative commons CC-BY-NC-SA
    <!-- Aspect Ratio -->
    <include ifSubset="aspect-ratio:16-9">./aspect-ratio-16-9.xml</include>
    <include ifSubset="aspect-ratio:16-10">./aspect-ratio-16-10.xml</include>
-   <include ifSubset="aspect-ratio:4-3" tinyScreen="false">./aspect-ratio-4-3.xml</include>
-   <include ifSubset="aspect-ratio:4-3" tinyScreen="true">./aspect-ratio-4-3-smallscreen.xml</include>
-   <include ifSubset="aspect-ratio:3-2" tinyScreen="false">./aspect-ratio-3-2.xml</include>
-   <include ifSubset="aspect-ratio:3-2" tinyScreen="true">./aspect-ratio-3-2-smallscreen.xml</include>
+   <include ifSubset="aspect-ratio:4-3">./aspect-ratio-4-3.xml</include>
+   <include ifSubset="aspect-ratio:3-2">./aspect-ratio-3-2.xml</include>
    <include ifSubset="aspect-ratio:5-3">./aspect-ratio-5-3.xml</include>
 
 </theme>
