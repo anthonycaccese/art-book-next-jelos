@@ -35,22 +35,13 @@
       </text>
       <textlist name="gamelist">
          <origin>0 0</origin>
-         <pos>0.042194092827004 0.225</pos><!-- 60 180 -->
+         <pos>0.042194092827004 0.23</pos><!-- 60 184 -->
          <size>0.281293952180028 0.6425</size><!-- 400 514 -->
-         <size ifSubset="help-system:off">0.281293952180028 0.7175</size><!-- 400 574 -->
+         <size ifSubset="help-system:off">0.281293952180028 0.74</size><!-- 400 574 -->
          <fontSize>0.035</fontSize><!-- 28 -->
-         <lineSpacing>1.71</lineSpacing>
+         <lineSpacing>1.7</lineSpacing>
+         <lineSpacing ifSubset="help-system:off">1.64</lineSpacing>
       </textlist>
-      <image name="gamelist-test" extra="true">
-         <origin>0 0</origin>
-         <pos>0.042194092827004 0.225</pos><!-- 60 180 -->
-         <size>0.281293952180028 0.6425</size><!-- 400 514 -->
-         <size ifSubset="help-system:off">0.281293952180028 0.7175</size><!-- 400 574 -->
-         <path>${spacerImage}</path>
-         <tile>true</tile>
-         <color>00880033</color>
-         <zIndex>100</zIndex>
-      </image>
       <image name="gamelist-background" extra="true">
          <size>0.365682137834037 1</size><!-- 520 800 -->
       </image>
@@ -63,9 +54,10 @@
    <view ifSubset="gamelist-layout:metadata-on" name="detailed,video">
       <text name="md_description">
          <pos>0.407876230661041 0.6875</pos><!-- 580 550 -->
-         <size>0.281293952180028 0.175</size><!-- 400 140 -->
+         <size>0.274261603375527 0.175</size><!-- 390 140 -->
          <pos ifSubset="help-system:off">0.407876230661041 0.7</pos><!-- 580 560 -->
-         <size ifSubset="help-system:off">0.281293952180028 0.2375</size><!-- 400 190 -->
+         <size ifSubset="help-system:off">0.274261603375527 0.2375</size><!-- 390 190 -->
+         <lineSpacing ifSubset="help-system:off">1.64</lineSpacing>
       </text>
       <image name="md_genre_icon">
          <pos>0.724331926863572 0.70875</pos><!-- 1030 567 -->
