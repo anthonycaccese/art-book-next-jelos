@@ -55,6 +55,12 @@ license:       creative commons CC-BY-NC-SA
       <include name="metadata-off-immersive" displayName="Metadata Off (Immersive)" />
    </subset>
 
+   <!-- Help System -->
+   <subset name="help-system" displayName="Help System">
+      <include name="on" displayName="On" />
+      <include name="off" displayName="Off" />
+   </subset>
+
    <view name="screen">
       <controllerActivity name="controllerActivity">
          <visible>false</visible>
@@ -64,7 +70,7 @@ license:       creative commons CC-BY-NC-SA
          <pos>1 1</pos>
       </text>
       <batteryIndicator name="batteryIndicator">
-         <color>FFFFFF</color>
+         <color>FFFFFF77</color>
          <itemSpacing>0</itemSpacing>
          <full>./_inc/images/battery-100-vertical.svg</full>
          <at75>./_inc/images/battery-75-vertical.svg</at75>
@@ -86,7 +92,7 @@ license:       creative commons CC-BY-NC-SA
          <lineSpacing>1</lineSpacing>
          <alignment>center</alignment>
       </text>
-      <helpsystem name="help">
+      <helpsystem ifSubset="help-system:on" name="help">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.95625</pos><!-- 50% 765 -->
          <!--<fontPath>${fontRegular}</fontPath>-->
@@ -106,7 +112,11 @@ license:       creative commons CC-BY-NC-SA
          <iconSelect>./_inc/images/help-select.svg</iconSelect>
          <iconF1>./_inc/images/help-f1.svg</iconF1>-->
       </helpsystem>
-      <image name="help-background" extra="static">
+      <helpsystem ifSubset="help-system:off" name="help">
+         <origin>0 0</origin>
+         <pos>1 1</pos>
+      </helpsystem>
+      <image ifSubset="help-system:on" name="help-background" extra="static">
          <origin>0 1</origin>
          <pos>0 1</pos>
          <size>1 0.0875</size><!-- 100% 70 -->
@@ -225,7 +235,7 @@ license:       creative commons CC-BY-NC-SA
          <origin>0 1</origin>
          <alignment>left</alignment>
          <fontPath>${fontBold}</fontPath>
-         <fontSize>0.038</fontSize><!-- 24 -->
+         <fontSize>0.035</fontSize><!-- 28 -->
          <lineSpacing>1.5</lineSpacing><!-- 6/6 -->
          <selectorColor>00000000</selectorColor>
          <selectedColor>${gamelistListTextlistSelectedColor}</selectedColor>
@@ -249,10 +259,10 @@ license:       creative commons CC-BY-NC-SA
 
    <view name="basic">
       <image name="logo">
-         <pos>0.5 0.13125</pos><!-- 50% 105 -->
+         <pos>0.5 0.11875</pos><!-- 50% 95 -->
       </image>
       <text name="logoText">
-         <pos>0.5 0.13125</pos><!-- 50% 105 -->
+         <pos>0.5 0.11875</pos><!-- 50% 95 -->
       </text>
       <textlist name="gamelist">
          <origin>0.5 1</origin>
@@ -267,46 +277,54 @@ license:       creative commons CC-BY-NC-SA
 
    <view name="detailed,video">
       <text name="md_lbl_rating,md_lbl_developer,md_developer,md_lbl_publisher,md_publisher,md_lbl_playcount,md_playcount,md_lbl_lastplayed,md_lbl_players,md_players,md_lbl_releasedate,md_lbl_genre,md_genre,md_description,md_name,md_lbl_gametime,md_gametime">
+         <origin>0 0.5</origin>
          <pos>1 1</pos>
          <fontPath>${fontBold}</fontPath>
          <alignment>left</alignment>
          <color>${gamelistListMetadataColor}</color>
          <fontSize>0.02</fontSize><!-- 16 -->
-      </text>
-      <text name="md_genre">
-         <fontSize>0.025</fontSize><!-- 20 -->
-         <size>0 0.025</size><!-- x 20 -->
-      </text>
-      <text name="md_description">
-         <origin>0 1</origin>
-         <fontPath>${fontRegular}</fontPath>
-         <color>${gamelistListDescriptionColor}</color>
-         <fontSize>0.03</fontSize><!-- 24 -->
+         <forceUppercase>true</forceUppercase>
       </text>
       <datetime name="md_releasedate,md_lastplayed">
+         <origin>0 0.5</origin>
          <pos>1 1</pos>
          <fontPath>${fontBold}</fontPath>
          <color>${gamelistListMetadataColor}</color>
          <alignment>left</alignment>
          <fontSize>0.02</fontSize><!-- 16 -->
+         <forceUppercase>true</forceUppercase>
       </datetime>
       <rating name="md_rating">
+         <origin>0 0.5</origin>
          <pos>1 1</pos>
          <color>${gamelistListRatingColor}</color>
          <filledPath>./_inc/images/icon-star-filled.svg</filledPath>
          <unfilledPath>./_inc/images/icon-star-unfilled.svg</unfilledPath>
-         <size>0 0.025</size><!-- x 20 -->
+         <size>0 0.035</size><!-- x 28 -->
       </rating>
-      <image name="md_releasedate_icon,md_players_icon,md_developer_icon,md_publisher_icon" extra="true">
+      <image name="md_releasedate_icon,md_players_icon,md_developer_icon,md_publisher_icon,md_genre_icon,md_lastplayed_icon,md_playcount_icon,md_gametime_icon" extra="true">
+         <origin>0 0.5</origin>
          <pos>1 1</pos>
          <color>${gamelistListMetadataIconColor}</color>
-         <size>0 0.025</size><!-- x 20 -->
+         <size>0 0.035</size><!-- x 28 -->
       </image>
       <image name="md_releasedate_icon">
-         <path>./_inc/images/icon-release-date.svg</path>
+         <path>./_inc/images/icon-releasedate.svg</path>
       </image>
       <image name="md_players_icon">
          <path>./_inc/images/icon-players.svg</path>
+      </image>
+      <image name="md_playcount_icon">
+         <path>./_inc/images/icon-playcount.svg</path>
+      </image>
+      <image name="md_gametime_icon">
+         <path>./_inc/images/icon-gametime.svg</path>
+      </image>
+      <image name="md_lastplayed_icon">
+         <path>./_inc/images/icon-lastplayed.svg</path>
+      </image>
+      <image name="md_genre_icon">
+         <path>./_inc/images/icon-genre.svg</path>
       </image>
       <image name="md_developer_icon">
          <path>./_inc/images/icon-developer.svg</path>
@@ -314,6 +332,13 @@ license:       creative commons CC-BY-NC-SA
       <image name="md_publisher_icon">
          <path>./_inc/images/icon-publisher.svg</path>
       </image>
+      <text name="md_description">
+         <origin>0 0</origin>
+         <fontPath>${fontRegular}</fontPath>
+         <color>${gamelistListDescriptionColor}</color>
+         <fontSize>0.03</fontSize><!-- 24 -->
+         <forceUppercase>false</forceUppercase>
+      </text>
       <image ifSubset="gamelist-layout:metadata-on|metadata-off" name="game-metadata-background" extra="true">
          <origin>0 0</origin>
          <path>${spacerImage}</path>
