@@ -60,15 +60,11 @@ license:       creative commons CC-BY-NC-SA
          <visible>false</visible>
       </controllerActivity>
       <text name="clock">
-         <origin>0 1</origin>
-         <size>0 0.02</size><!-- 0 16 -->
-         <fontPath>${fontBold}</fontPath>
-         <fontSize>0.02</fontSize><!-- 16 -->
-         <color>FFFFFF55</color>
+         <origin>0 0</origin>
+         <pos>1 1</pos>
       </text>
       <batteryIndicator name="batteryIndicator">
-         <pos>0 0.9475</pos><!-- 0 758 -->
-         <color>FFFFFF55</color>
+         <color>FFFFFF</color>
          <itemSpacing>0</itemSpacing>
          <full>./_inc/images/battery-100-vertical.svg</full>
          <at75>./_inc/images/battery-75-vertical.svg</at75>
@@ -91,17 +87,29 @@ license:       creative commons CC-BY-NC-SA
          <alignment>center</alignment>
       </text>
       <helpsystem name="help">
-         <origin>0.5 1</origin>
-         <pos>0.5 0.975</pos><!-- 50% 780 -->
-         <fontPath>${fontLight}</fontPath>
-         <fontSize>0.02</fontSize><!-- 16 -->
-         <textColor>FFFFFF55</textColor>
-         <iconColor>FFFFFF55</iconColor>
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.95625</pos><!-- 50% 765 -->
+         <!--<fontPath>${fontRegular}</fontPath>-->
+         <fontSize>0.025</fontSize><!-- 20 -->
+         <textColor>FFFFFF77</textColor>
+         <iconColor>FFFFFF77</iconColor>
+         <iconUpDown>./_inc/images/help-dpad-updown.svg</iconUpDown>
+         <iconLeftRight>./_inc/images/help-dpad-leftright.svg</iconLeftRight>
+         <iconUpDownLeftRight>./_inc/images/help-dpad-updownleftright.svg</iconUpDownLeftRight>
+         <!--<iconA>./_inc/images/help-a.svg</iconA>
+         <iconB>./_inc/images/help-b.svg</iconB>
+         <iconX>./_inc/images/help-x.svg</iconX>
+         <iconY>./_inc/images/help-y.svg</iconY>
+         <iconL>./_inc/images/help-l.svg</iconL>
+         <iconR>./_inc/images/help-r.svg</iconR>
+         <iconStart>./_inc/images/help-start.svg</iconStart>
+         <iconSelect>./_inc/images/help-select.svg</iconSelect>
+         <iconF1>./_inc/images/help-f1.svg</iconF1>-->
       </helpsystem>
       <image name="help-background" extra="static">
          <origin>0 1</origin>
          <pos>0 1</pos>
-         <size>1 0.0675</size><!-- 100% 54 -->
+         <size>1 0.0875</size><!-- 100% 70 -->
          <path>${spacerImage}</path>
          <tile>true</tile>
          <color>000000</color>
@@ -160,6 +168,7 @@ license:       creative commons CC-BY-NC-SA
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <size>0 1</size>
+         <path>./_inc/images/background-missing.png</path>
          <path>./_inc/systems/${system.theme}.png</path>
          <color>${systemArtColor}</color>
          <zIndex>2</zIndex>
@@ -196,6 +205,7 @@ license:       creative commons CC-BY-NC-SA
       </image>
       <image name="background" extra="true">
          <color>${systemBackgroundColor}</color>
+         <color ifSubset="system-view:multi">000000</color>
       </image>
    </view>
 

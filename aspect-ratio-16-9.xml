@@ -2,11 +2,9 @@
    <formatVersion>7</formatVersion>
 
    <view name="screen">
-      <text name="clock">
-         <pos>0.014064697609001 0.98125</pos><!-- 20 785 -->
-      </text>
       <batteryIndicator name="batteryIndicator">
-         <size>0.990154711673699 0.03375</size><!-- 1408 27 -->
+         <pos>0 0.0225</pos><!-- - 18 -->
+         <size>0.990154711673699 0.05</size><!-- 1408 40 -->
       </batteryIndicator>
    </view>
 
