@@ -54,10 +54,10 @@
       </text>
       <textlist name="gamelist">
          <origin>0 0</origin>
-         <pos>0.048611111111111 0.24</pos><!-- 35 136 -->
+         <pos>0.048611111111111 0.25</pos><!-- 35 136 -->
          <size>0.347222222222222 0.725</size><!-- 250 320 -->
          <fontSize>0.04</fontSize>
-         <lineSpacing>1.585</lineSpacing>
+         <lineSpacing>1.5</lineSpacing>
       </textlist>
       <image name="gamelist-background" extra="true">
          <size>0.444444444444444 1</size><!-- 320 480 -->
@@ -67,12 +67,12 @@
    <view ifSubset="gamelist-layout:metadata-on" name="detailed,video">
       <rating name="md_rating">
          <origin>0 0</origin>
-         <pos>0.486111111111111 0.697916666666667</pos><!-- 350 335 -->
+         <pos>0.486111111111111 0.71</pos><!-- 350 335 -->
          <size>0 0.041666666666667</size><!-- x 20 -->
       </rating>
       <datetime name="md_releasedate">
          <origin>0 0</origin>
-         <pos>0.638888888888889 0.697916666666667</pos><!-- 460 335 -->
+         <pos>0.638888888888889 0.71</pos><!-- 460 335 -->
          <size>0.166666666666667 0.041666666666667</size><!-- 120 20 -->
          <fontPath>${fontLight}</fontPath>
          <fontSize>0.033333333333333</fontSize><!-- 16 -->
@@ -80,7 +80,7 @@
       </datetime>
       <text name="md_description">
          <origin>0 0</origin>
-         <pos>0.486111111111111 0.78125</pos><!-- 350 375 -->
+         <pos>0.486111111111111 0.8</pos><!-- 350 375 -->
          <size>0.472222222222222 0.158333333333333</size><!-- 340 78 -->
          <fontPath>${fontRegular}</fontPath>
          <fontSize>0.033333333333333</fontSize><!-- 16 -->
