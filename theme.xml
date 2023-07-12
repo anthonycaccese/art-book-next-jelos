@@ -16,6 +16,7 @@ license:       creative commons CC-BY-NC-SA
    </variables>
 
    <!-- Aspect Ratio -->
+   <subset name="aspect-ratio" displayName="Aspect Ratio">
       <include name="16-9" displayName="16:9" />
       <include name="16-10" displayName="16:10" />
       <include name="4-3" displayName="4:3" />
