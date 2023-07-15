@@ -8,16 +8,11 @@
       </batteryIndicator>
    </view>
 
-   <!-- remove later -->
    <view name="system,basic,detailed,video">
-      <helpsystem name="help">
+      <helpsystem ifSubset="help-system:off" name="help">
          <origin>0 0</origin>
          <pos>1 1</pos>
       </helpsystem>
-      <image name="help-background" extra="static">
-         <origin>0 0</origin>
-         <pos>1 1</pos>
-      </image>
    </view>
 
    <view name="system">
@@ -28,6 +23,7 @@
          <path>./_inc/images/system-art-mask-4-3.png</path>
       </image>
       <carousel ifSubset="system-view:multi" name="systemcarousel">
+         <logoSize>1 1</logoSize>
          <maxLogoCount>4</maxLogoCount>
       </carousel>
    </view>
@@ -92,7 +88,7 @@
          <pos>0.78125 0.71875</pos><!-- 500 345 -->
          <size>0.1875 0.041666666666667</size><!-- 120 20 -->
          <fontPath>${fontBold}</fontPath>
-         <fontSize>0.029166666666667</fontSize><!-- 16 -->
+         <fontSize>0.029166666666667</fontSize><!-- 14 -->
          <alignment>left</alignment>
       </datetime>
       <text name="md_description">
@@ -132,7 +128,7 @@
    <view ifSubset="gamelist-layout:metadata-off|metadata-off-immersive" name="video">
       <image ifSubset="gamelist-layout:metadata-off-immersive" name="md_marquee">
          <pos>0.75 0.5</pos><!-- 480 240 -->
-         <maxSize>0.40625 0.895833333333333</maxSize><!-- 260 430 -->
+         <maxSize>0.359375 0.895833333333333</maxSize><!-- 230 430 -->
       </image>
       <video name="md_video">
          <pos>0.75 0.5</pos><!-- 480 240 -->

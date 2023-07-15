@@ -59,7 +59,7 @@ license:       creative commons CC-BY-NC-SA
          <pos>1 1</pos>
       </text>
       <batteryIndicator name="batteryIndicator">
-         <color>ffffffdd</color>
+         <color>FFFFFF</color>
          <itemSpacing>0</itemSpacing>
          <full>./_inc/images/battery-100-vertical.svg</full>
          <at75>./_inc/images/battery-75-vertical.svg</at75>
@@ -191,6 +191,8 @@ license:       creative commons CC-BY-NC-SA
          <origin>0 1</origin>
          <alignment>left</alignment>
          <fontPath>${fontBold}</fontPath>
+         <fontSize>0.035</fontSize><!-- 28 -->
+         <lineSpacing>1.5</lineSpacing><!-- 6/6 -->
          <selectorColor>00000000</selectorColor>
          <selectedColor>${gamelistListTextlistSelectedColor}</selectedColor>
          <primaryColor>${gamelistListTextlistUnselectedColor}</primaryColor>
@@ -247,6 +249,7 @@ license:       creative commons CC-BY-NC-SA
          <alignment>left</alignment>
          <fontSize>0.02</fontSize><!-- 16 -->
          <forceUppercase>true</forceUppercase>
+         <format>%Y-%m-%d</format>
       </datetime>
       <rating name="md_rating">
          <origin>0 0.5</origin>
@@ -313,60 +316,15 @@ license:       creative commons CC-BY-NC-SA
       <video name="md_video">
          <origin>0.5 0.5</origin>
          <delay>2</delay>
-         <delay ifSubset="gamelist-layout:metadata-off-immersive">1</delay>
+         <delay ifSubset="gamelist-layout:metadata-off-immersive">0.5</delay>
          <effect>none</effect>
          <showSnapshotDelay>true</showSnapshotDelay>
          <showSnapshotNoVideo>true</showSnapshotNoVideo>
          <showSnapshotDelay ifSubset="gamelist-layout:metadata-off-immersive">false</showSnapshotDelay>
          <showSnapshotNoVideo ifSubset="gamelist-layout:metadata-off-immersive">false</showSnapshotNoVideo>
-         <color ifSubset="gamelist-layout:metadata-off-immersive">FFFFFF77</color>
+         <color ifSubset="gamelist-layout:metadata-off-immersive">FFFFFF99</color>
          <zIndex>3</zIndex>
       </video>
-   </view>
-
-   <view name="grid">
-      <image name="md_image">
-         <visible>false</visible>
-      </image>
-      <video name="md_video">
-         <visible>false</visible>
-         <showSnapshotDelay>false</showSnapshotDelay>
-      </video>
-      <imagegrid name="gamegrid">
-         <pos>0.05 0.325</pos>
-         <size>0.9 0.60</size>
-         <margin>0 0</margin>
-         <padding>0 0 0 0</padding>
-         <autoLayout>3 1</autoLayout>
-         <autoLayoutSelectedZoom>1.0</autoLayoutSelectedZoom>
-         <centerSelection>true</centerSelection>
-         <animateSelection>false</animateSelection>
-         <scrollSound>./_inc/sounds/select.wav</scrollSound>
-         <scrollDirection>horizontal</scrollDirection>
-         <scrollLoop>true</scrollLoop>
-      </imagegrid>
-      <gridtile name="default">
-         <padding>5 5</padding>
-         <backgroundCornerSize>0 0</backgroundCornerSize>
-         <selectionMode>image</selectionMode>
-         <backgroundColor>11111100</backgroundColor>
-         <imageColor>ffffff44</imageColor>
-      </gridtile>
-      <gridtile name="selected">
-         <backgroundColor>ffffff11</backgroundColor>
-         <imageColor>ffffffff</imageColor>
-      </gridtile>
-      <text name="gridtile">
-         <padding>-1 0</padding>
-         <alignment>center</alignment>
-         <fontPath>${bodyFont}</fontPath>
-         <fontSize>0.036</fontSize>
-         <lineSpacing>1.2</lineSpacing>
-         <color>111111</color>
-      </text>
-      <text name="gridtile_selected">
-         <color>cccccc</color>
-      </text>
    </view>
 
    <view name="menu">

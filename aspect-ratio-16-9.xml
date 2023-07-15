@@ -7,6 +7,13 @@
       <include name="off" displayName="Off" />
    </subset>
 
+   <view name="screen">
+      <batteryIndicator name="batteryIndicator">
+         <pos>0 0.0225</pos><!-- - 18 -->
+         <size>0.990154711673699 0.05</size><!-- 1408 40 -->
+      </batteryIndicator>
+   </view>
+
    <view name="system,basic,detailed,video">
       <helpsystem ifSubset="help-system:on" name="help">
          <origin>0.5 0.5</origin>
@@ -41,13 +48,6 @@
          <color>000000</color>
          <zIndex>5</zIndex>
       </image>
-   </view>
-
-   <view name="screen">
-      <batteryIndicator name="batteryIndicator">
-         <pos>0 0.0225</pos><!-- - 18 -->
-         <size>0.990154711673699 0.05</size><!-- 1408 40 -->
-      </batteryIndicator>
    </view>
 
    <view name="system">
