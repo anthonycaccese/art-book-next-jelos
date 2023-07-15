@@ -36,8 +36,8 @@
          <size>0.319444444444444 0.104166666666667</size><!-- 230 50 -->
       </text>
       <textlist name="gamelist">
-         <fontSize>0.039583333333333</fontSize><!-- 19 -->
-         <lineSpacing>1.585</lineSpacing>
+         <fontSize>0.041666666666667</fontSize><!-- 20 -->
+         <lineSpacing>1.68</lineSpacing>
       </textlist>
    </view>
 
@@ -97,7 +97,7 @@
          <size>0.472222222222222 0.158333333333333</size><!-- 340 78 -->
          <fontPath>${fontRegular}</fontPath>
          <fontSize>0.033333333333333</fontSize><!-- 16 -->
-         <lineSpacing>1.22</lineSpacing>
+         <lineSpacing>1.32</lineSpacing>
       </text>
       <image name="game-metadata-background" extra="true">
          <origin>0 1</origin>
