@@ -1,11 +1,53 @@
 <theme>
    <formatVersion>7</formatVersion>
 
+   <!-- Help System -->
+   <subset name="help-system" displayName="Help System">
+      <include name="on" displayName="On" />
+      <include name="off" displayName="Off" />
+   </subset>
+
    <view name="screen">
       <batteryIndicator name="batteryIndicator">
          <pos>0 0.0225</pos><!-- - 18 -->
-         <size>0.9890625 0.05</size><!-- 1408 40 -->
+         <size>0.9890625 0.0425</size><!-- 1408 34 -->
       </batteryIndicator>
+   </view>
+
+   <view name="system,basic,detailed,video">
+      <helpsystem ifSubset="help-system:on" name="help">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.95625</pos><!-- 50% 765 -->
+         <fontPath>${fontLight}</fontPath>
+         <fontSize>00.0225</fontSize><!-- 18 -->
+         <textColor>FFFFFF77</textColor>
+         <iconColor>FFFFFF77</iconColor>
+         <iconUpDown>./_inc/images/help-dpad-updown.svg</iconUpDown>
+         <iconLeftRight>./_inc/images/help-dpad-leftright.svg</iconLeftRight>
+         <iconUpDownLeftRight>./_inc/images/help-dpad-updownleftright.svg</iconUpDownLeftRight>
+         <!--<iconA>./_inc/images/help-a.svg</iconA>
+         <iconB>./_inc/images/help-b.svg</iconB>
+         <iconX>./_inc/images/help-x.svg</iconX>
+         <iconY>./_inc/images/help-y.svg</iconY>
+         <iconL>./_inc/images/help-l.svg</iconL>
+         <iconR>./_inc/images/help-r.svg</iconR>
+         <iconStart>./_inc/images/help-start.svg</iconStart>
+         <iconSelect>./_inc/images/help-select.svg</iconSelect>
+         <iconF1>./_inc/images/help-f1.svg</iconF1>-->
+      </helpsystem>
+      <helpsystem ifSubset="help-system:off" name="help">
+         <origin>0 0</origin>
+         <pos>1 1</pos>
+      </helpsystem>
+      <image ifSubset="help-system:on" name="help-background" extra="static">
+         <origin>0 1</origin>
+         <pos>0 1</pos>
+         <size>1 0.0875</size><!-- 100% 70 -->
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <color>000000</color>
+         <zIndex>5</zIndex>
+      </image>
    </view>
 
    <view name="system">
@@ -24,6 +66,10 @@
       <text name="logoText">
          <size>0.328125 0.1</size><!-- 420 80 -->
       </text>
+      <textlist name="gamelist">
+         <fontSize>0.035</fontSize><!-- 28 -->
+         <lineSpacing>1.5</lineSpacing><!-- 6/6 -->
+      </textlist>
    </view>
 
    <view name="detailed,video">

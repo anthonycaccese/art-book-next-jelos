@@ -3,11 +3,12 @@
 
    <view name="screen">
       <batteryIndicator name="batteryIndicator">
-         <pos>0 0.0375</pos><!-- - 18 -->
-         <size>0.9765625 0.066666666666667</size><!-- 625 32 -->
+         <pos>0 0.03125</pos><!-- 0 15 -->
+         <size>0.978125 0.066666666666667</size><!-- 626 32 -->
       </batteryIndicator>
    </view>
 
+   <!-- remove later -->
    <view name="system,basic,detailed,video">
       <helpsystem name="help">
          <origin>0 0</origin>
@@ -35,13 +36,23 @@
       <text name="logoText">
          <size>0.359375 0.104166666666667</size><!-- 230 50 -->
       </text>
+      <textlist name="gamelist">
+         <fontSize>0.039583333333333</fontSize><!-- 19 -->
+         <lineSpacing>1.585</lineSpacing>
+      </textlist>
    </view>
 
    <view name="basic">
+      <image name="logo">
+         <pos>0.5 0.135416666666667</pos><!-- 50% 65 -->
+      </image>
+      <text name="logoText">
+         <pos>0.5 0.135416666666667</pos><!-- 50% 65 -->
+      </text>
       <textlist name="gamelist">
          <origin>0.5 0</origin>
          <pos>0.5 0.283333333333333</pos><!-- 50% 136 -->
-         <size>0.7 0.666666666666667</size><!-- - 320 -->
+         <size>0.84375 0.725</size><!-- 540 348 -->
       </textlist>
    </view>
 
@@ -55,9 +66,7 @@
       <textlist name="gamelist">
          <origin>0 0</origin>
          <pos>0.0546875 0.24</pos><!-- 35 134 -->
-         <size>0.390625 0.725</size><!-- 250 324 -->
-         <fontSize>0.04</fontSize>
-         <lineSpacing>1.585</lineSpacing>
+         <size>0.390625 0.725</size><!-- 250 348 -->
       </textlist>
       <image name="gamelist-background" extra="true">
          <size>0.5 1</size><!-- 320 480 -->
@@ -66,16 +75,21 @@
 
    <view ifSubset="gamelist-layout:metadata-on" name="detailed,video">
       <rating name="md_rating">
-         <origin>0 0</origin>
-         <pos>0.546875 0.697916666666667</pos><!-- 350 335 -->
+         <origin>0 0.5</origin>
+         <pos>0.546875 0.71875</pos><!-- 350 345 -->
          <size>0 0.041666666666667</size><!-- x 20 -->
       </rating>
+      <image name="md_releasedate_icon">
+         <origin>0 0.5</origin>
+         <pos>0.734375 0.71875</pos><!-- 470 345 -->
+         <size>0.03125 0.041666666666667</size><!-- 20 20 -->
+      </image>
       <datetime name="md_releasedate">
-         <origin>0 0</origin>
-         <pos>0.71875 0.697916666666667</pos><!-- 460 335 -->
+         <origin>0 0.5</origin>
+         <pos>0.78125 0.71875</pos><!-- 500 345 -->
          <size>0.1875 0.041666666666667</size><!-- 120 20 -->
-         <fontPath>${fontLight}</fontPath>
-         <fontSize>0.033333333333333</fontSize><!-- 16 -->
+         <fontPath>${fontBold}</fontPath>
+         <fontSize>0.029166666666667</fontSize><!-- 16 -->
          <alignment>left</alignment>
       </datetime>
       <text name="md_description">
@@ -84,7 +98,7 @@
          <size>0.40625 0.158333333333333</size><!-- 260 78 -->
          <fontPath>${fontRegular}</fontPath>
          <fontSize>0.033333333333333</fontSize><!-- 16 -->
-         <lineSpacing>1.2</lineSpacing>
+         <lineSpacing>1.22</lineSpacing>
       </text>
       <image name="game-metadata-background" extra="true">
          <origin>0 1</origin>
