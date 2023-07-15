@@ -324,6 +324,51 @@ license:       creative commons CC-BY-NC-SA
       </video>
    </view>
 
+   <view name="grid">
+      <image name="md_image">
+         <visible>false</visible>
+      </image>
+      <video name="md_video">
+         <visible>false</visible>
+         <showSnapshotDelay>false</showSnapshotDelay>
+      </video>
+      <imagegrid name="gamegrid">
+         <pos>0.05 0.325</pos>
+         <size>0.9 0.60</size>
+         <margin>0 0</margin>
+         <padding>0 0 0 0</padding>
+         <autoLayout>3 1</autoLayout>
+         <autoLayoutSelectedZoom>1.0</autoLayoutSelectedZoom>
+         <centerSelection>true</centerSelection>
+         <animateSelection>false</animateSelection>
+         <scrollSound>./_inc/sounds/select.wav</scrollSound>
+         <scrollDirection>horizontal</scrollDirection>
+         <scrollLoop>true</scrollLoop>
+      </imagegrid>
+      <gridtile name="default">
+         <padding>5 5</padding>
+         <backgroundCornerSize>0 0</backgroundCornerSize>
+         <selectionMode>image</selectionMode>
+         <backgroundColor>11111100</backgroundColor>
+         <imageColor>ffffff44</imageColor>
+      </gridtile>
+      <gridtile name="selected">
+         <backgroundColor>ffffff11</backgroundColor>
+         <imageColor>ffffffff</imageColor>
+      </gridtile>
+      <text name="gridtile">
+         <padding>-1 0</padding>
+         <alignment>center</alignment>
+         <fontPath>${bodyFont}</fontPath>
+         <fontSize>0.036</fontSize>
+         <lineSpacing>1.2</lineSpacing>
+         <color>111111</color>
+      </text>
+      <text name="gridtile_selected">
+         <color>cccccc</color>
+      </text>
+   </view>
+
    <view name="menu">
       <menuText name="menutitle">
          <fontPath>${fontBold}</fontPath>
