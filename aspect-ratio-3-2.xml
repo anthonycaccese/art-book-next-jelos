@@ -34,6 +34,7 @@
       </image>
       <text name="logoText">
          <size>0.319444444444444 0.104166666666667</size><!-- 230 50 -->
+         <fontSize>0.05</fontSize>
       </text>
       <textlist name="gamelist">
          <fontSize>0.041666666666667</fontSize><!-- 20 -->
@@ -49,7 +50,6 @@
          <pos>0.5 0.135416666666667</pos><!-- 50% 65 -->
       </text>
       <textlist name="gamelist">
-         <origin>0.5 0</origin>
          <pos>0.5 0.24</pos><!-- 50% 134 -->
          <size>0.861111111111111 0.725</size><!-- 620 348 -->
       </textlist>
@@ -92,10 +92,8 @@
          <alignment>left</alignment>
       </datetime>
       <text name="md_description">
-         <origin>0 0</origin>
          <pos>0.486111111111111 0.78125</pos><!-- 350 375 -->
          <size>0.472222222222222 0.158333333333333</size><!-- 340 78 -->
-         <fontPath>${fontRegular}</fontPath>
          <fontSize>0.033333333333333</fontSize><!-- 16 -->
          <lineSpacing>1.32</lineSpacing>
       </text>

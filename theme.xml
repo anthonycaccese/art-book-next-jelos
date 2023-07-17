@@ -59,7 +59,7 @@ license:       creative commons CC-BY-NC-SA
          <pos>1 1</pos>
       </text>
       <batteryIndicator name="batteryIndicator">
-         <color>FFFFFF</color>
+         <color>bbbbbb</color>
          <itemSpacing>0</itemSpacing>
          <full>./_inc/images/battery-100-vertical.svg</full>
          <at75>./_inc/images/battery-75-vertical.svg</at75>
@@ -155,7 +155,7 @@ license:       creative commons CC-BY-NC-SA
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <maxSize>0.5 0.3</maxSize>
-         <color>ffffff</color>
+         <color>${systemLogoColor}</color>
          <path>./_inc/systems/${system.theme}.svg</path>
          <zIndex>50</zIndex>
       </image>
@@ -184,15 +184,12 @@ license:       creative commons CC-BY-NC-SA
       <text name="logoText">
          <origin>0.5 0.5</origin>
          <color>${gamelistListLogoColor}</color>
-         <fontSize>0.05</fontSize>
          <zIndex>5</zIndex>
       </text>
       <textlist name="gamelist">
-         <origin>0 1</origin>
+         <origin>0 0</origin>
          <alignment>left</alignment>
          <fontPath>${fontBold}</fontPath>
-         <fontSize>0.035</fontSize><!-- 28 -->
-         <lineSpacing>1.5</lineSpacing><!-- 6/6 -->
          <selectorColor>00000000</selectorColor>
          <selectedColor>${gamelistListTextlistSelectedColor}</selectedColor>
          <primaryColor>${gamelistListTextlistUnselectedColor}</primaryColor>
@@ -214,16 +211,8 @@ license:       creative commons CC-BY-NC-SA
    </view>
 
    <view name="basic">
-      <image name="logo">
-         <pos>0.5 0.11875</pos><!-- 50% 95 -->
-      </image>
-      <text name="logoText">
-         <pos>0.5 0.11875</pos><!-- 50% 95 -->
-      </text>
       <textlist name="gamelist">
-         <origin>0.5 1</origin>
-         <pos>0.5 0.8875</pos><!-- 50% 710 -->
-         <size>0.7 0.63</size><!-- - 504 -->
+         <origin>0.5 0</origin>
          <alignment>center</alignment>
       </textlist>
       <image name="gamelist-background" extra="true">
@@ -238,7 +227,6 @@ license:       creative commons CC-BY-NC-SA
          <fontPath>${fontBold}</fontPath>
          <alignment>left</alignment>
          <color>${gamelistListMetadataColor}</color>
-         <fontSize>0.02</fontSize><!-- 16 -->
          <forceUppercase>true</forceUppercase>
       </text>
       <datetime name="md_releasedate,md_lastplayed">
@@ -247,7 +235,6 @@ license:       creative commons CC-BY-NC-SA
          <fontPath>${fontBold}</fontPath>
          <color>${gamelistListMetadataColor}</color>
          <alignment>left</alignment>
-         <fontSize>0.02</fontSize><!-- 16 -->
          <forceUppercase>true</forceUppercase>
          <format>%Y-%m-%d</format>
       </datetime>
@@ -257,13 +244,11 @@ license:       creative commons CC-BY-NC-SA
          <color>${gamelistListRatingColor}</color>
          <filledPath>./_inc/images/icon-star-filled.svg</filledPath>
          <unfilledPath>./_inc/images/icon-star-unfilled.svg</unfilledPath>
-         <size>0 0.035</size><!-- x 28 -->
       </rating>
       <image name="md_releasedate_icon,md_players_icon,md_developer_icon,md_publisher_icon,md_genre_icon,md_lastplayed_icon,md_playcount_icon,md_gametime_icon" extra="true">
          <origin>0 0.5</origin>
          <pos>1 1</pos>
          <color>${gamelistListMetadataIconColor}</color>
-         <size>0 0.035</size><!-- x 28 -->
       </image>
       <image name="md_releasedate_icon">
          <path>./_inc/images/icon-releasedate.svg</path>
@@ -293,7 +278,6 @@ license:       creative commons CC-BY-NC-SA
          <origin>0 0</origin>
          <fontPath>${fontRegular}</fontPath>
          <color>${gamelistListDescriptionColor}</color>
-         <fontSize>0.03</fontSize><!-- 24 -->
          <forceUppercase>false</forceUppercase>
       </text>
       <image ifSubset="gamelist-layout:metadata-on|metadata-off" name="game-metadata-background" extra="true">
@@ -308,6 +292,7 @@ license:       creative commons CC-BY-NC-SA
    <view name="detailed">
       <image name="md_image">
          <origin>0.5 0.5</origin>
+         <color ifSubset="gamelist-layout:metadata-off-immersive">FFFFFFDD</color>
          <zIndex>3</zIndex>
       </image>
    </view>

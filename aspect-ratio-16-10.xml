@@ -1,7 +1,6 @@
 <theme>
    <formatVersion>7</formatVersion>
 
-   <!-- Help System -->
    <subset name="help-system" displayName="Help System">
       <include name="on" displayName="On" />
       <include name="off" displayName="Off" />
@@ -9,31 +8,22 @@
 
    <view name="screen">
       <batteryIndicator name="batteryIndicator">
-         <pos>0 0.0225</pos><!-- - 18 -->
-         <size>0.9890625 0.0425</size><!-- 1408 34 -->
+         <pos>0 0.016666666666667</pos><!-- 0 20 -->
+         <size>0.989583333333333 0.041666666666667</size><!-- 1900 50 -->
       </batteryIndicator>
    </view>
 
    <view name="system,basic,detailed,video">
       <helpsystem ifSubset="help-system:on" name="help">
          <origin>0.5 0.5</origin>
-         <pos>0.5 0.95625</pos><!-- 50% 765 -->
+         <pos>0.5 0.9475</pos><!-- 50% 1137 -->
          <fontPath>${fontLight}</fontPath>
-         <fontSize>00.0225</fontSize><!-- 18 -->
+         <fontSize>0.021666666666667</fontSize><!-- 26 -->
          <textColor>FFFFFF77</textColor>
          <iconColor>FFFFFF77</iconColor>
          <iconUpDown>./_inc/images/help-dpad-updown.svg</iconUpDown>
          <iconLeftRight>./_inc/images/help-dpad-leftright.svg</iconLeftRight>
          <iconUpDownLeftRight>./_inc/images/help-dpad-updownleftright.svg</iconUpDownLeftRight>
-         <!--<iconA>./_inc/images/help-a.svg</iconA>
-         <iconB>./_inc/images/help-b.svg</iconB>
-         <iconX>./_inc/images/help-x.svg</iconX>
-         <iconY>./_inc/images/help-y.svg</iconY>
-         <iconL>./_inc/images/help-l.svg</iconL>
-         <iconR>./_inc/images/help-r.svg</iconR>
-         <iconStart>./_inc/images/help-start.svg</iconStart>
-         <iconSelect>./_inc/images/help-select.svg</iconSelect>
-         <iconF1>./_inc/images/help-f1.svg</iconF1>-->
       </helpsystem>
       <helpsystem ifSubset="help-system:off" name="help">
          <origin>0 0</origin>
@@ -42,7 +32,7 @@
       <image ifSubset="help-system:on" name="help-background" extra="static">
          <origin>0 1</origin>
          <pos>0 1</pos>
-         <size>1 0.0875</size><!-- 100% 70 -->
+         <size>1 0.104166666666667</size><!-- 100% 125 -->
          <path>${spacerImage}</path>
          <tile>true</tile>
          <color>000000</color>
@@ -61,47 +51,74 @@
 
    <view name="basic,detailed,video">
       <image name="logo">
-         <maxSize>0.328125 0.1</maxSize><!-- 420 80 -->
+         <maxSize>0.276041666666667 0.1</maxSize><!-- 530 120 -->
       </image>
       <text name="logoText">
-         <size>0.328125 0.1</size><!-- 420 80 -->
+         <size>0.276041666666667 0.1</size><!-- 530 120 -->
+         <fontSize>0.05</fontSize>
       </text>
       <textlist name="gamelist">
-         <fontSize>0.035</fontSize><!-- 28 -->
-         <lineSpacing>1.5</lineSpacing><!-- 6/6 -->
+         <fontSize>0.035</fontSize><!-- 42 -->
+         <lineSpacing>1.476190476190476</lineSpacing><!-- 62 -->
+      </textlist>
+   </view>
+
+   <view name="basic">
+      <image name="logo">
+         <pos>0.5 0.120833333333333</pos><!-- 50% 145 -->
+      </image>
+      <text name="logoText">
+         <pos>0.5 0.120833333333333</pos><!-- 50% 145 -->
+      </text>
+      <textlist name="gamelist">
+         <pos>0.5 0.233333333333333</pos><!-- 50% 280 -->
+         <size ifSubset="help-system:on">0.895833333333333 0.62</size><!-- 1720 744(62X12) -->
+         <size ifSubset="help-system:off">0.895833333333333 0.723333333333333</size><!-- 1720 868(62X14) -->
       </textlist>
    </view>
 
    <view name="detailed,video">
       <image name="logo">
-         <pos>0.203125 0.13125</pos><!-- 260 105 -->
+         <pos>0.1875 0.120833333333333</pos><!-- 360 145 -->
       </image>
       <text name="logoText">
-         <pos>0.203125 0.13125</pos><!-- 260 105 -->
+         <pos>0.1875 0.120833333333333</pos><!-- 360 145 -->
       </text>
       <textlist name="gamelist">
-         <pos>0.0390625 0.8875</pos><!-- 50 710 -->
-         <size>0.3203125 0.63</size><!-- 410 504 -->
+         <pos>0.033854166666667 0.233333333333333</pos><!-- 65 280 -->
+         <size ifSubset="help-system:on">0.307291666666667 0.62</size><!-- 590 744(62X12) -->
+         <size ifSubset="help-system:off">0.307291666666667 0.723333333333333</size><!-- 590 868(62X14) -->
       </textlist>
       <image name="gamelist-background" extra="true">
-         <size>0.40625 1</size><!-- 520 800 -->
+         <size>0.375 1</size><!-- 720 1200 -->
       </image>
       <image name="game-metadata-background" extra="true">
-         <pos>0.40625 0</pos><!-- 520 0 -->
-         <size>0.59375 1</size><!-- 760 720-->
+         <pos>0.375 0</pos><!-- 720 0 -->
+         <size>0.625 1</size><!-- 1200 1200-->
       </image>
    </view>
 
    <view ifSubset="gamelist-layout:metadata-on" name="detailed,video">
+      <text name="md_genre,md_releasedate,md_players,md_developer,md_publisher">
+         <fontSize>0.02</fontSize><!-- 16 -->
+      </text>
+      <datetime name="md_releasedate">
+         <fontSize>0.02</fontSize><!-- 16 -->
+      </datetime>
+      <image name="md_releasedate_icon,md_players_icon,md_developer_icon,md_publisher_icon,md_genre_icon,md_lastplayed_icon,md_playcount_icon,md_gametime_icon" extra="true">
+         <size>0 0.035</size><!-- x 28 -->
+      </image>
       <text name="md_genre">
          <pos>0.453125 0.6625</pos><!-- 580 530 -->
       </text>
       <text name="md_description">
          <pos>0.453125 0.8875</pos><!-- 580 710 -->
          <size>0.3515625 0.18</size><!-- 450 144 -->
+         <fontSize>0.03</fontSize><!-- 24 -->
       </text>
       <rating name="md_rating">
          <pos>0.85 0.6625</pos><!-- 1088 530 -->
+         <size>0 0.035</size><!-- x 28 -->
       </rating>
       <image name="md_releasedate_icon">
          <pos>0.85 0.7125</pos><!-- 1088 570 -->
@@ -147,20 +164,25 @@
 
    <view ifSubset="gamelist-layout:metadata-off|metadata-off-immersive" name="detailed">
       <image name="md_image">
-         <pos>0.703125 0.46875</pos><!-- 900 375 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off">0.515625 0.875</maxSize><!-- 660 700 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off-immersive">1.0421875 1.1725</maxSize><!-- 1334 938 -->
+         <pos ifSubset="help-system:on">0.6875 0.447916666666667</pos><!-- 1320 537.5 -->
+         <pos ifSubset="help-system:off">0.6875 0.5</pos><!-- 1320 600 -->
+         <maxSize ifSubset="help-system:on,gamelist-layout:metadata-off">0.5625 0.795833333333333</maxSize><!-- 1080 955 -->
+         <maxSize ifSubset="help-system:off,gamelist-layout:metadata-off">0.5625 0.9</maxSize><!-- 1080 1080 -->
+         <maxSize ifSubset="gamelist-layout:metadata-off-immersive">1.1 1.1</maxSize>
       </image>
    </view>
    <view ifSubset="gamelist-layout:metadata-off|metadata-off-immersive" name="video">
       <image ifSubset="gamelist-layout:metadata-off-immersive" name="md_marquee">
-         <pos>0.703125 0.46875</pos><!-- 900 375 -->
-         <maxSize>0.421792618629174 0.75</maxSize><!-- 540 600 -->
+         <pos ifSubset="help-system:on">0.6875 0.447916666666667</pos><!-- 1320 537.5 -->
+         <pos ifSubset="help-system:off">0.6875 0.5</pos><!-- 1320 600 -->
+         <maxSize>0.40625 0.754166666666667</maxSize><!-- 780 905 -->
       </image>
       <video name="md_video">
-         <pos>0.703125 0.46875</pos><!-- 900 375 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off">0.515625 0.875</maxSize><!-- 660 700 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off-immersive">1.0421875 1.1725</maxSize><!-- 1334 938 -->
+         <pos ifSubset="help-system:on">0.6875 0.447916666666667</pos><!-- 1320 537.5 -->
+         <pos ifSubset="help-system:off">0.6875 0.5</pos><!-- 1320 600 -->
+         <maxSize ifSubset="help-system:on,gamelist-layout:metadata-off">0.5625 0.795833333333333</maxSize><!-- 1080 955 -->
+         <maxSize ifSubset="help-system:off,gamelist-layout:metadata-off">0.5625 0.9</maxSize><!-- 1080 1080 -->
+         <maxSize ifSubset="gamelist-layout:metadata-off-immersive">1.1 1.1</maxSize>
       </video>
    </view>
 

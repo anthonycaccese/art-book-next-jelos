@@ -7,7 +7,7 @@
       <systemArtColor>ffffff</systemArtColor>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>111111</systemMaskColor>
-      <systemLogoColor>ffffff</systemLogoColor>
+      <systemLogoColor>dddddd</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>111111</gamelistListTextlistBackgroundColor>
       <gamelistListLogoColor>ffffffaa</gamelistListLogoColor>
@@ -32,7 +32,7 @@
       <systemArtColor>ffffff</systemArtColor>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>111111</systemMaskColor>
-      <systemLogoColor>ffffff</systemLogoColor>
+      <systemLogoColor>dddddd</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>111111</gamelistListTextlistBackgroundColor>
       <gamelistListLogoColor>ffffffaa</gamelistListLogoColor>
@@ -57,7 +57,7 @@
       <systemArtColor>ffffff</systemArtColor>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>0D141C</systemMaskColor>
-      <systemLogoColor>ffffff</systemLogoColor>
+      <systemLogoColor>dddddd</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>0D141C</gamelistListTextlistBackgroundColor>
       <gamelistListLogoColor>ffffffaa</gamelistListLogoColor>
@@ -82,7 +82,7 @@
       <systemArtColor>ffffff</systemArtColor>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>231942</systemMaskColor>
-      <systemLogoColor>ffffff</systemLogoColor>
+      <systemLogoColor>dddddd</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>231942</gamelistListTextlistBackgroundColor>
       <gamelistListLogoColor>ffffffaa</gamelistListLogoColor>
@@ -132,7 +132,7 @@
       <systemArtColor>ffffff</systemArtColor>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>000000</systemMaskColor>
-      <systemLogoColor>ffffff</systemLogoColor>
+      <systemLogoColor>dddddd</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>111111</gamelistListTextlistBackgroundColor>
       <gamelistListLogoColor>ffffffaa</gamelistListLogoColor>
@@ -157,7 +157,7 @@
       <systemArtColor>cccccc</systemArtColor>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>777777</systemMaskColor>
-      <systemLogoColor>ffffff</systemLogoColor>
+      <systemLogoColor>dddddd</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>777777</gamelistListTextlistBackgroundColor>
       <gamelistListLogoColor>ffffff</gamelistListLogoColor>
