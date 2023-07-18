@@ -78,7 +78,7 @@ license:       creative commons CC-BY-NC-SA
          <pos>1 1</pos>
       </batteryIndicator>
       <batteryIndicator ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="batteryIndicator">
-         <color>bbbbbb</color>
+         <color>${statusBarIconColor}</color>
          <itemSpacing>0</itemSpacing>
          <full>./_inc/images/battery-100-vertical.svg</full>
          <at75>./_inc/images/battery-75-vertical.svg</at75>

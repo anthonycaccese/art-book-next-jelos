@@ -25,6 +25,7 @@
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
       <statusBarBackgroundColor>111111</statusBarBackgroundColor>
+      <statusBarIconColor>bbbbbb</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:art-book">
       <backgroundColor>000000</backgroundColor>
@@ -51,6 +52,7 @@
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
       <statusBarBackgroundColor>111111</statusBarBackgroundColor>
+      <statusBarIconColor>bbbbbb</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:steam-os">
       <backgroundColor>000000</backgroundColor>
@@ -77,6 +79,7 @@
       <!-- Menu System -->
       <menuBackgroundColor>0D141C</menuBackgroundColor>
       <statusBarBackgroundColor>0D141C</statusBarBackgroundColor>
+      <statusBarIconColor>bbbbbb</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:snes">
       <backgroundColor>000000</backgroundColor>
@@ -103,6 +106,7 @@
       <!-- Menu System -->
       <menuBackgroundColor>231942</menuBackgroundColor>
       <statusBarBackgroundColor>231942</statusBarBackgroundColor>
+      <statusBarIconColor>bbbbbb</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:famicom">
       <backgroundColor>000000</backgroundColor>
@@ -129,6 +133,7 @@
       <!-- Menu System -->
       <menuBackgroundColor>711521</menuBackgroundColor>
       <statusBarBackgroundColor>711521</statusBarBackgroundColor>
+      <statusBarIconColor>DCD6B6</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:black">
       <backgroundColor>000000</backgroundColor>
@@ -155,6 +160,7 @@
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
       <statusBarBackgroundColor>000000</statusBarBackgroundColor>
+      <statusBarIconColor>bbbbbb</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:grayscale">
       <backgroundColor>000000</backgroundColor>
@@ -163,12 +169,12 @@
       <systemArtColor>cccccc</systemArtColor>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>777777</systemMaskColor>
-      <systemLogoColor>dddddd</systemLogoColor>
+      <systemLogoColor>cccccc</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>777777</gamelistListTextlistBackgroundColor>
-      <gamelistListLogoColor>ffffff</gamelistListLogoColor>
-      <gamelistListTextlistSelectedColor>ffffff</gamelistListTextlistSelectedColor>
-      <gamelistListTextlistUnselectedColor>ffffff22</gamelistListTextlistUnselectedColor>
+      <gamelistListLogoColor>dddddd</gamelistListLogoColor>
+      <gamelistListTextlistSelectedColor>dddddd</gamelistListTextlistSelectedColor>
+      <gamelistListTextlistUnselectedColor>dddddd55</gamelistListTextlistUnselectedColor>
       <gamelistListMetadataBackgroundColor>dddddd</gamelistListMetadataBackgroundColor>
       <gamelistListMetadataColor>000000aa</gamelistListMetadataColor>
       <gamelistListMetadataIconColor>00000055</gamelistListMetadataIconColor>
@@ -180,6 +186,7 @@
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
       <menuBackgroundColor>777777</menuBackgroundColor>
-      <statusBarBackgroundColor>222222</statusBarBackgroundColor>
+      <statusBarBackgroundColor>777777</statusBarBackgroundColor>
+      <statusBarIconColor>cccccc</statusBarIconColor>
    </variables>
 </theme>
