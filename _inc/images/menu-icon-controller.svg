@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,8H8V4A2,2 0 0,1 10,2H14A2,2 0 0,1 16,4V8H20A2,2 0 0,1 22,10V14A2,2 0 0,1 20,16H16V20A2,2 0 0,1 14,22H10A2,2 0 0,1 8,20V16H4A2,2 0 0,1 2,14V10A2,2 0 0,1 4,8Z" fill="#fff" /></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <g id="Artboard11" transform="matrix(0.407407, 0, 0, 0.407407, 1.00001, 1.00001)">
+    <path d="M18,18L18,0L36,0L36,18L54,18L54,36L36,36L36,54L18,54L18,36L0,36L0,18L18,18Z" style="fill:white;"/>
+  </g>
+</svg>
