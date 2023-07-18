@@ -52,7 +52,7 @@
 
    <view name="system">
       <text name="logoText">
-         <fontSize>0.0875</fontSize><!-- 42 -->
+         <fontSize>0.1</fontSize><!-- 108 -->
       </text>
       <image ifSubset="system-view-style:centered|centered-custom" name="system-art-mask" extra="true">
          <path>./_inc/images/system-art-mask-16-9.png</path>
@@ -72,7 +72,7 @@
       </image>
       <text name="logoText">
          <size>0.276041666666667 0.111111111111111</size><!-- 530 120 -->
-         <fontSize>0.05</fontSize>
+         <fontSize>0.05</fontSize><!-- 54 -->
       </text>
       <textlist name="gamelist">
          <fontSize>0.038888888888889</fontSize><!-- 42 -->
