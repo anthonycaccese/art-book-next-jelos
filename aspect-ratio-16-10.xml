@@ -30,11 +30,6 @@
          <origin>0.5 0.5</origin>
          <pos>0.5 0.9475</pos><!-- 50% 1137 -->
          <fontSize>0.028333333333333</fontSize><!-- 34 -->
-         <textColor>FFFFFF77</textColor>
-         <iconColor>FFFFFF77</iconColor>
-         <iconUpDown>./_inc/images/help-dpad-updown.svg</iconUpDown>
-         <iconLeftRight>./_inc/images/help-dpad-leftright.svg</iconLeftRight>
-         <iconUpDownLeftRight>./_inc/images/help-dpad-updownleftright.svg</iconUpDownLeftRight>
       </helpsystem>
       <image ifSubset="help-system-display:on" name="help-background" extra="static">
          <origin>0 1</origin>
