@@ -14,16 +14,17 @@
       <gamelistListTextlistSelectedColor>ffffff</gamelistListTextlistSelectedColor>
       <gamelistListTextlistUnselectedColor>ffffff33</gamelistListTextlistUnselectedColor>
       <gamelistListMetadataBackgroundColor>222222</gamelistListMetadataBackgroundColor>
-      <gamelistListMetadataColor>ffffff88</gamelistListMetadataColor>
-      <gamelistListMetadataIconColor>ffffff33</gamelistListMetadataIconColor>
+      <gamelistListMetadataColor>ffffff55</gamelistListMetadataColor>
+      <gamelistListMetadataIconColor>ffffff22</gamelistListMetadataIconColor>
       <gamelistListDescriptionColor>ffffffee</gamelistListDescriptionColor>
-      <gamelistListRatingColor>ffffff33</gamelistListRatingColor>
+      <gamelistListRatingColor>ffffff44</gamelistListRatingColor>
       <!-- Help System -->
       <helpBackgroundColor>000000</helpBackgroundColor>
       <helpIconColor>ffffff66</helpIconColor>
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
+      <statusBarBackgroundColor>111111</statusBarBackgroundColor>
    </variables>
    <variables ifSubset="color-scheme:art-book">
       <backgroundColor>000000</backgroundColor>
@@ -49,6 +50,7 @@
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
+      <statusBarBackgroundColor>111111</statusBarBackgroundColor>
    </variables>
    <variables ifSubset="color-scheme:steam-os">
       <backgroundColor>000000</backgroundColor>
@@ -74,6 +76,7 @@
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
       <menuBackgroundColor>0D141C</menuBackgroundColor>
+      <statusBarBackgroundColor>0D141C</statusBarBackgroundColor>
    </variables>
    <variables ifSubset="color-scheme:snes">
       <backgroundColor>000000</backgroundColor>
@@ -99,6 +102,7 @@
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
       <menuBackgroundColor>231942</menuBackgroundColor>
+      <statusBarBackgroundColor>231942</statusBarBackgroundColor>
    </variables>
    <variables ifSubset="color-scheme:famicom">
       <backgroundColor>000000</backgroundColor>
@@ -124,6 +128,7 @@
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
       <menuBackgroundColor>711521</menuBackgroundColor>
+      <statusBarBackgroundColor>711521</statusBarBackgroundColor>
    </variables>
    <variables ifSubset="color-scheme:black">
       <backgroundColor>000000</backgroundColor>
@@ -149,6 +154,7 @@
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
+      <statusBarBackgroundColor>000000</statusBarBackgroundColor>
    </variables>
    <variables ifSubset="color-scheme:grayscale">
       <backgroundColor>000000</backgroundColor>
@@ -174,5 +180,6 @@
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
       <menuBackgroundColor>777777</menuBackgroundColor>
+      <statusBarBackgroundColor>222222</statusBarBackgroundColor>
    </variables>
 </theme>

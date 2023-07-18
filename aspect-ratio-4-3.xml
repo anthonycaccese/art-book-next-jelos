@@ -2,14 +2,26 @@
    <formatVersion>7</formatVersion>
 
    <view name="screen">
-      <batteryIndicator name="batteryIndicator">
+      <batteryIndicator ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="batteryIndicator">
          <pos>0 0.03125</pos><!-- 0 15 -->
          <size>0.978125 0.066666666666667</size><!-- 626 32 -->
       </batteryIndicator>
    </view>
 
    <view name="system,basic,detailed,video">
-      <helpsystem ifSubset="help-system:off" name="help">
+      <image ifSubset="status-bar-display:battery-text-network" name="status-bar-background" extra="true">
+         <size>0.203125 0.133333333333333</size><!-- 130 64 -->
+      </image>
+      <image ifSubset="status-bar-display:battery-network" name="status-bar-background" extra="true">
+         <size>0.1484375 0.133333333333333</size><!-- 95 64 -->
+      </image>
+      <image ifSubset="status-bar-display:battery-text" name="status-bar-background" extra="true">
+         <size>0.15 0.133333333333333</size><!-- 96 64 -->
+      </image>
+      <image ifSubset="status-bar-display:battery" name="status-bar-background" extra="true">
+         <size>0.096875 0.133333333333333</size><!-- 62 64 -->
+      </image>
+      <helpsystem name="help">
          <origin>0 0</origin>
          <pos>1 1</pos>
       </helpsystem>
@@ -19,10 +31,10 @@
       <text name="logoText">
          <fontSize>0.0875</fontSize><!-- 42 -->
       </text>
-      <image ifSubset="system-view:centered" name="system-art-mask" extra="true">
+      <image ifSubset="system-view-style:centered" name="system-art-mask" extra="true">
          <path>./_inc/images/system-art-mask-4-3.png</path>
       </image>
-      <carousel ifSubset="system-view:multi" name="systemcarousel">
+      <carousel ifSubset="system-view-style:multi" name="systemcarousel">
          <logoSize>1 1</logoSize>
          <maxLogoCount>4</maxLogoCount>
       </carousel>
@@ -72,7 +84,7 @@
       </image>
    </view>
 
-   <view ifSubset="gamelist-layout:metadata-on" name="detailed,video">
+   <view ifSubset="gamelist-view-style:metadata-on" name="detailed,video">
       <rating name="md_rating">
          <origin>0 0.5</origin>
          <pos>0.546875 0.71875</pos><!-- 350 345 -->
@@ -103,35 +115,35 @@
          <size>0.5 0.354166666666667</size><!-- 320 170-->
       </image>
    </view>
-   <view ifSubset="gamelist-layout:metadata-on" name="detailed">
+   <view ifSubset="gamelist-view-style:metadata-on" name="detailed">
       <image name="md_image">
          <pos>0.75 0.322916666666667</pos><!-- 480 155 -->
          <maxSize>0.40625 0.520833333333333</maxSize><!-- 260 250 -->
       </image>
    </view>
-   <view ifSubset="gamelist-layout:metadata-on" name="video">
+   <view ifSubset="gamelist-view-style:metadata-on" name="video">
       <video name="md_video">
          <pos>0.75 0.322916666666667</pos><!-- 480 155 -->
          <maxSize>0.40625 0.520833333333333</maxSize><!-- 260 250 -->
       </video>
    </view>
 
-   <view ifSubset="gamelist-layout:metadata-off|metadata-off-immersive" name="detailed">
+   <view ifSubset="gamelist-view-style:metadata-off|metadata-off-immersive" name="detailed">
       <image name="md_image">
          <pos>0.75 0.5</pos><!-- 480 240 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off">0.40625 0.895833333333333</maxSize><!-- 260 430 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off-immersive">1.1 1.1</maxSize>
+         <maxSize ifSubset="gamelist-view-style:metadata-off">0.40625 0.895833333333333</maxSize><!-- 260 430 -->
+         <maxSize ifSubset="gamelist-view-style:metadata-off-immersive">1.1 1.1</maxSize>
       </image>
    </view>
-   <view ifSubset="gamelist-layout:metadata-off|metadata-off-immersive" name="video">
-      <image ifSubset="gamelist-layout:metadata-off-immersive" name="md_marquee">
+   <view ifSubset="gamelist-view-style:metadata-off|metadata-off-immersive" name="video">
+      <image ifSubset="gamelist-view-style:metadata-off-immersive" name="md_marquee">
          <pos>0.75 0.5</pos><!-- 480 240 -->
          <maxSize>0.359375 0.895833333333333</maxSize><!-- 230 430 -->
       </image>
       <video name="md_video">
          <pos>0.75 0.5</pos><!-- 480 240 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off">0.40625 0.895833333333333</maxSize><!-- 260 430 -->
-         <maxSize ifSubset="gamelist-layout:metadata-off-immersive">1.1 1.1</maxSize>
+         <maxSize ifSubset="gamelist-view-style:metadata-off">0.40625 0.895833333333333</maxSize><!-- 260 430 -->
+         <maxSize ifSubset="gamelist-view-style:metadata-off-immersive">1.1 1.1</maxSize>
       </video>
    </view>
 

@@ -36,16 +36,26 @@ license:       creative commons CC-BY-NC-SA
    </subset>
    <include>./colors.xml</include>
 
+   <!-- Status Bar Display -->
+   <subset name="status-bar-display" displayName="Status Bar Display">
+      <include name="battery-text-network" displayName="Battery (%) + Network" />
+      <include name="battery-network" displayName="Battery + Network" />
+      <include name="battery-text" displayName="Battery (%)" />
+      <include name="battery" displayName="Battery" />
+      <include name="off" displayName="Off" />
+   </subset>
+
    <!-- System View Style -->
-   <subset name="system-view" displayName="System View Style">
+   <subset name="system-view-style" displayName="System View Style">
       <include name="centered" displayName="Centered Artwork" />
       <include name="multi" displayName="Multi Artwork" />
       <include name="no-artwork" displayName="No Artwork" />
    </subset>
 
    <!-- Gamelist View Style -->
-   <subset name="gamelist-layout" displayName="Gamelist View Style">
+   <subset name="gamelist-view-style" displayName="Gamelist View Style">
       <include name="metadata-on" displayName="Metadata On" />
+      <include name="metadata-on-immersive" displayName="Metadata On (Immersive)" />
       <include name="metadata-off" displayName="Metadata Off" />
       <include name="metadata-off-immersive" displayName="Metadata Off (Immersive)" />
    </subset>
@@ -55,10 +65,12 @@ license:       creative commons CC-BY-NC-SA
          <visible>false</visible>
       </controllerActivity>
       <text name="clock">
-         <origin>0 0</origin>
          <pos>1 1</pos>
       </text>
-      <batteryIndicator name="batteryIndicator">
+      <batteryIndicator ifSubset="status-bar-display:off" name="batteryIndicator">
+         <pos>1 1</pos>
+      </batteryIndicator>
+      <batteryIndicator ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="batteryIndicator">
          <color>bbbbbb</color>
          <itemSpacing>0</itemSpacing>
          <full>./_inc/images/battery-100-vertical.svg</full>
@@ -89,6 +101,13 @@ license:       creative commons CC-BY-NC-SA
          <tile>true</tile>
          <zIndex>0</zIndex>
       </image>
+      <image ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="status-bar-background" extra="true">
+         <origin>1 0</origin>
+         <pos>1 0</pos>
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <color>${statusBarBackgroundColor}</color>
+      </image>
    </view>
 
    <view name="system">
@@ -114,14 +133,14 @@ license:       creative commons CC-BY-NC-SA
          <pos>1 1</pos>
       </text>
       <!-- System View Mask: Centered Artwork -->
-      <image ifSubset="system-view:centered" name="system-art-mask" extra="true">
+      <image ifSubset="system-view-style:centered" name="system-art-mask" extra="true">
          <origin>0.5 0</origin>
          <pos>0.5 0</pos>
          <size>0 1</size>
          <color>${systemMaskColor}</color>
          <zIndex>4</zIndex>
       </image>
-      <image ifSubset="system-view:centered" name="system-art-fade" extra="true">
+      <image ifSubset="system-view-style:centered" name="system-art-fade" extra="true">
          <origin>0 0</origin>
          <pos>0 0</pos>
          <size>1 1</size>
@@ -130,7 +149,7 @@ license:       creative commons CC-BY-NC-SA
          <color>${systemArtFade}</color>
          <zIndex>3</zIndex>
       </image>
-      <image ifSubset="system-view:centered" name="system-art" extra="true">
+      <image ifSubset="system-view-style:centered" name="system-art" extra="true">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <size>0 1</size>
@@ -140,18 +159,18 @@ license:       creative commons CC-BY-NC-SA
          <zIndex>2</zIndex>
       </image>
       <!-- System View Mask: Multi Artwork -->
-      <image ifSubset="system-view:multi" name="logo">
+      <image ifSubset="system-view-style:multi" name="logo">
          <path>./_inc/systems/_default.png</path>
          <path>./_inc/systems/${system.theme}.png</path>
          <color>ffffffcc</color>
       </image>
-      <carousel ifSubset="system-view:multi" name="systemcarousel">
+      <carousel ifSubset="system-view-style:multi" name="systemcarousel">
          <size>1 1</size>
          <logoScale>1</logoScale>
          <logoSize>1 1</logoSize>
          <zIndex>3</zIndex>
       </carousel>
-      <image ifSubset="system-view:multi" name="system-art" extra="true">
+      <image ifSubset="system-view-style:multi" name="system-art" extra="true">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <maxSize>0.5 0.3</maxSize>
@@ -160,7 +179,7 @@ license:       creative commons CC-BY-NC-SA
          <zIndex>50</zIndex>
       </image>
       <!-- System View: No Artwork -->
-      <image ifSubset="system-view:no-artwork" name="system-art" extra="true">
+      <image ifSubset="system-view-style:no-artwork" name="system-art" extra="true">
          <origin>0.5 0</origin>
          <pos>0.5 0</pos>
          <size>1 1</size>
@@ -171,7 +190,7 @@ license:       creative commons CC-BY-NC-SA
       </image>
       <image name="background" extra="true">
          <color>${systemBackgroundColor}</color>
-         <color ifSubset="system-view:multi">000000</color>
+         <color ifSubset="system-view-style:multi">000000</color>
       </image>
    </view>
 
@@ -280,7 +299,7 @@ license:       creative commons CC-BY-NC-SA
          <color>${gamelistListDescriptionColor}</color>
          <forceUppercase>false</forceUppercase>
       </text>
-      <image ifSubset="gamelist-layout:metadata-on|metadata-off" name="game-metadata-background" extra="true">
+      <image ifSubset="gamelist-view-style:metadata-on|metadata-on-immersive|metadata-off" name="game-metadata-background" extra="true">
          <origin>0 0</origin>
          <path>${spacerImage}</path>
          <tile>true</tile>
@@ -292,7 +311,7 @@ license:       creative commons CC-BY-NC-SA
    <view name="detailed">
       <image name="md_image">
          <origin>0.5 0.5</origin>
-         <color ifSubset="gamelist-layout:metadata-off-immersive">FFFFFFDD</color>
+         <color ifSubset="gamelist-view-style:metadata-on-immersive|metadata-off-immersive">FFFFFF99</color>
          <zIndex>3</zIndex>
       </image>
    </view>
@@ -301,13 +320,11 @@ license:       creative commons CC-BY-NC-SA
       <video name="md_video">
          <origin>0.5 0.5</origin>
          <delay>2</delay>
-         <delay ifSubset="gamelist-layout:metadata-off-immersive">0.5</delay>
          <effect>none</effect>
          <showSnapshotDelay>true</showSnapshotDelay>
          <showSnapshotNoVideo>true</showSnapshotNoVideo>
-         <showSnapshotDelay ifSubset="gamelist-layout:metadata-off-immersive">false</showSnapshotDelay>
-         <showSnapshotNoVideo ifSubset="gamelist-layout:metadata-off-immersive">false</showSnapshotNoVideo>
-         <color ifSubset="gamelist-layout:metadata-off-immersive">FFFFFF99</color>
+         <color ifSubset="gamelist-view-style:metadata-on-immersive">FFFFFFDD</color>
+         <color ifSubset="gamelist-view-style:metadata-off-immersive">FFFFFF99</color>
          <zIndex>3</zIndex>
       </video>
    </view>
