@@ -30,7 +30,7 @@
          <origin>0.5 0.5</origin>
          <pos>0.5 0.941666666666667</pos><!-- 50% 1017 -->
          <fontPath>${fontLight}</fontPath>
-         <fontSize>0.024074074074074</fontSize><!-- 26 -->
+         <fontSize>0.025</fontSize><!-- 27 -->
          <textColor>FFFFFF77</textColor>
          <iconColor>FFFFFF77</iconColor>
          <iconUpDown>./_inc/images/help-dpad-updown.svg</iconUpDown>
