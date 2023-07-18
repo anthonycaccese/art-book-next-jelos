@@ -167,14 +167,14 @@
       <image ifSubset="gamelist-view-style:metadata-on-immersive" name="md_marquee">
          <origin>1 1</origin>
          <pos>0.973958333333333 0.652777777777778</pos><!-- 1870 705 -->
-         <maxSize>0.15625 0.2</maxSize><!-- 780 705 -->
+         <maxSize>0.15625 0.2</maxSize><!-- 780 216 -->
       </image>
    </view>
    <view ifSubset="gamelist-view-style:metadata-on|metadata-on-immersive" name="detailed">
       <image name="md_image">
          <pos>0.6875 0.324074074074074</pos><!-- 1320 350 -->
          <maxSize ifSubset="gamelist-view-style:metadata-on">0.5625 0.518518518518519</maxSize><!-- 1080 560 -->
-         <maxSize ifSubset="gamelist-view-style:metadata-on-immersive">0.625 1</maxSize><!-- 1200 560 -->
+         <maxSize ifSubset="gamelist-view-style:metadata-on-immersive">0.625 1</maxSize><!-- 1200 1080 -->
          <zIndex>2</zIndex>
       </image>
    </view>

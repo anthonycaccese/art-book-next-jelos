@@ -39,7 +39,7 @@
          <maxLogoCount>4</maxLogoCount>
       </carousel>
       <image ifSubset="system-view-style:fullscreen-custom" name="system-art" extra="true">
-         <size>1 0</size>
+         <size>0 1</size>
       </image>
    </view>
 
