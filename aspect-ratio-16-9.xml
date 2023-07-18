@@ -43,7 +43,6 @@
          <path>${spacerImage}</path>
          <tile>true</tile>
          <color>000000</color>
-         <zIndex>5</zIndex>
       </image>
       <helpsystem ifSubset="help-system-display:off" name="help">
          <origin>0 0</origin>
@@ -52,13 +51,19 @@
    </view>
 
    <view name="system">
-      <image ifSubset="system-view-style:centered" name="system-art-mask" extra="true">
+      <text name="logoText">
+         <fontSize>0.0875</fontSize><!-- 42 -->
+      </text>
+      <image ifSubset="system-view-style:centered|centered-custom" name="system-art-mask" extra="true">
          <path>./_inc/images/system-art-mask-16-9.png</path>
       </image>
-      <carousel ifSubset="system-view-style:multi" name="systemcarousel">
+      <carousel ifSubset="system-view-style:multi|multi-custom" name="systemcarousel">
          <logoSize>1.1 1.1</logoSize>
          <maxLogoCount>5</maxLogoCount>
       </carousel>
+      <image ifSubset="system-view-style:fullscreen-custom" name="system-art" extra="true">
+         <size>1 0</size>
+      </image>
    </view>
 
    <view name="basic,detailed,video">

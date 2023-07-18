@@ -6,6 +6,9 @@ license:       creative commons CC-BY-NC-SA
 <theme>
    <formatVersion>7</formatVersion>
 
+   <!-- User Customizations -->
+   <include>${themeCustomizationsPath}theme.xml</include>
+
    <!-- Variables -->
    <variables>
       <fontBold>./_inc/fonts/Oxygen-Bold.ttf</fontBold>
@@ -13,6 +16,7 @@ license:       creative commons CC-BY-NC-SA
       <fontRegular>./_inc/fonts/Oxygen-Regular.ttf</fontRegular>
       <fontLogo>./_inc/fonts/ChangaOne-Italic.ttf</fontLogo>
       <spacerImage>./_inc/images/space.png</spacerImage>
+      <themeCustomizationsPath>~/roms/jelos/theme-customizations/art-book-next/</themeCustomizationsPath>
    </variables>
 
    <!-- Aspect Ratio -->
@@ -40,8 +44,10 @@ license:       creative commons CC-BY-NC-SA
       <include name="famicom" displayName="Famicom" />
       <include name="black" displayName="Black" />
       <include name="grayscale" displayName="Grayscale" />
+      <include name="custom" displayName="Custom" />
    </subset>
    <include>./colors.xml</include>
+   <include ifSubset="color-scheme:custom">${themeCustomizationsPath}colors.xml</include>
 
    <!-- Status Bar Display -->
    <subset name="status-bar-display" displayName="Status Bar Display">
@@ -57,6 +63,9 @@ license:       creative commons CC-BY-NC-SA
       <include name="centered" displayName="Centered Artwork" />
       <include name="multi" displayName="Multi Artwork" />
       <include name="no-artwork" displayName="No Artwork" />
+      <include name="centered-custom" displayName="Centered Artwork (Custom)" />
+      <include name="multi-custom" displayName="Multi Artwork (Custom)" />
+      <include name="fullscreen-custom" displayName="Fullscreen Artwork (Custom)" />
    </subset>
 
    <!-- Gamelist View Style -->
@@ -93,6 +102,8 @@ license:       creative commons CC-BY-NC-SA
    <view name="system,basic,detailed,video">
       <image name="logo">
          <path>./_inc/systems/${system.theme}.svg</path>
+         <path>${themeCustomizationsPath}logos/${system.theme}.svg</path>
+         <path>${themeCustomizationsPath}logos/${system.theme}.png</path>
       </image>
       <text name="logoText">
          <fontPath>${fontLogo}</fontPath>
@@ -100,6 +111,11 @@ license:       creative commons CC-BY-NC-SA
          <lineSpacing>1</lineSpacing>
          <alignment>center</alignment>
       </text>
+      <!--<text name="themeCustomizationsPathTest" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <text>${themeCustomizationsPath}</text>
+      </text>-->
       <image name="background" extra="true">
          <origin>0 0</origin>
          <pos>0 0</pos>
@@ -140,14 +156,14 @@ license:       creative commons CC-BY-NC-SA
          <pos>1 1</pos>
       </text>
       <!-- System View Mask: Centered Artwork -->
-      <image ifSubset="system-view-style:centered" name="system-art-mask" extra="true">
+      <image ifSubset="system-view-style:centered|centered-custom" name="system-art-mask" extra="true">
          <origin>0.5 0</origin>
          <pos>0.5 0</pos>
          <size>0 1</size>
          <color>${systemMaskColor}</color>
          <zIndex>4</zIndex>
       </image>
-      <image ifSubset="system-view-style:centered" name="system-art-fade" extra="true">
+      <image ifSubset="system-view-style:centered|centered-custom" name="system-art-fade" extra="true">
          <origin>0 0</origin>
          <pos>0 0</pos>
          <size>1 1</size>
@@ -156,34 +172,51 @@ license:       creative commons CC-BY-NC-SA
          <color>${systemArtFade}</color>
          <zIndex>3</zIndex>
       </image>
-      <image ifSubset="system-view-style:centered" name="system-art" extra="true">
+      <image ifSubset="system-view-style:centered|centered-custom" name="system-art" extra="true">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <size>0 1</size>
          <path>./_inc/systems/_default.png</path>
          <path>./_inc/systems/${system.theme}.png</path>
+         <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/_default.jpg</path>
+         <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/${system.theme}.jpg</path>
+         <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/${system.theme}.png</path>
          <color>${systemArtColor}</color>
          <zIndex>2</zIndex>
       </image>
       <!-- System View Mask: Multi Artwork -->
-      <image ifSubset="system-view-style:multi" name="logo">
+      <image ifSubset="system-view-style:multi|multi-custom" name="logo">
          <path>./_inc/systems/_default.png</path>
          <path>./_inc/systems/${system.theme}.png</path>
+         <path ifSubset="system-view-style:multi-custom">${themeCustomizationsPath}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:multi-custom">${themeCustomizationsPath}backgrounds/${system.theme}.png</path>
          <color>ffffffcc</color>
       </image>
-      <carousel ifSubset="system-view-style:multi" name="systemcarousel">
+      <carousel ifSubset="system-view-style:multi|multi-custom" name="systemcarousel">
          <size>1 1</size>
          <logoScale>1</logoScale>
          <logoSize>1 1</logoSize>
          <zIndex>3</zIndex>
       </carousel>
-      <image ifSubset="system-view-style:multi" name="system-art" extra="true">
+      <image ifSubset="system-view-style:multi|multi-custom" name="system-art" extra="true">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <maxSize>0.5 0.3</maxSize>
          <color>${systemLogoColor}</color>
          <path>./_inc/systems/${system.theme}.svg</path>
          <zIndex>50</zIndex>
+      </image>
+      <!-- System View: Fullscreen Artwork -->
+      <image ifSubset="system-view-style:fullscreen-custom" name="system-art" extra="true">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.5</pos>
+         <size>0 1</size>
+         <path>${themeCustomizationsPath}backgrounds/_default.jpg</path>
+         <path>${themeCustomizationsPath}backgrounds/_default.png</path>
+         <path>${themeCustomizationsPath}backgrounds/${system.theme}.jpg</path>
+         <path>${themeCustomizationsPath}backgrounds/${system.theme}.png</path>
+         <zIndex>2</zIndex>
       </image>
       <!-- System View: No Artwork -->
       <image ifSubset="system-view-style:no-artwork" name="system-art" extra="true">
@@ -196,8 +229,7 @@ license:       creative commons CC-BY-NC-SA
          <zIndex>2</zIndex>
       </image>
       <image name="background" extra="true">
-         <color>${systemBackgroundColor}</color>
-         <color ifSubset="system-view-style:multi">000000</color>
+         <color>000000</color>
       </image>
    </view>
 
@@ -375,6 +407,23 @@ license:       creative commons CC-BY-NC-SA
          <color>${menuBackgroundColor}</color>
          <cornerSize>20 20</cornerSize>
       </menuBackground>
+      <menuIcons name="menuicons">
+         <iconSystem>./_inc/images/menu-icon-system.svg</iconSystem>
+         <iconUpdates>./_inc/images/menu-icon-update.svg</iconUpdates>
+         <iconControllers>./_inc/images/menu-icon-controller.svg</iconControllers>
+         <iconGames>./_inc/images/menu-icon-games.svg</iconGames>
+         <iconUI>./_inc/images/menu-icon-ui.svg</iconUI>
+         <iconSound>./_inc/images/menu-icon-sound.svg</iconSound>
+         <iconNetwork>./_inc/images/menu-icon-network.svg</iconNetwork>
+         <iconScraper>./_inc/images/menu-icon-scraper.svg</iconScraper>
+         <iconAdvanced>./_inc/images/menu-icon-advanced.svg</iconAdvanced>
+         <iconQuit>./_inc/images/menu-icon-quit.svg</iconQuit>
+         <iconRetroachievements>./_inc/images/menu-icon-achievements.svg</iconRetroachievements>
+         <iconKodi>./_inc/images/menu-icon-kodi.svg</iconKodi>
+         <iconRestart>./_inc/images/menu-icon-restart.svg</iconRestart>
+         <iconShutdown>./_inc/images/menu-icon-shutdown.svg</iconShutdown>
+         <iconFastShutdown>./_inc/images/menu-icon-shutdown.svg</iconFastShutdown>
+      </menuIcons>
    </view>
 
    <!-- Aspect Ratio -->
@@ -383,5 +432,8 @@ license:       creative commons CC-BY-NC-SA
    <include ifSubset="aspect-ratio:4-3">./aspect-ratio-4-3.xml</include>
    <include ifSubset="aspect-ratio:3-2">./aspect-ratio-3-2.xml</include>
    <include ifSubset="aspect-ratio:5-3">./aspect-ratio-5-3.xml</include>
+
+   <!-- User Customizations -->
+   <include>${themeCustomizationsPath}theme.xml</include>
 
 </theme>

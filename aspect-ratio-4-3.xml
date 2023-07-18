@@ -31,13 +31,16 @@
       <text name="logoText">
          <fontSize>0.0875</fontSize><!-- 42 -->
       </text>
-      <image ifSubset="system-view-style:centered" name="system-art-mask" extra="true">
+      <image ifSubset="system-view-style:centered|centered-custom" name="system-art-mask" extra="true">
          <path>./_inc/images/system-art-mask-4-3.png</path>
       </image>
-      <carousel ifSubset="system-view-style:multi" name="systemcarousel">
+      <carousel ifSubset="system-view-style:multi|multi-custom" name="systemcarousel">
          <logoSize>1 1</logoSize>
          <maxLogoCount>4</maxLogoCount>
       </carousel>
+      <image ifSubset="system-view-style:fullscreen-custom" name="system-art" extra="true">
+         <size>0 1</size>
+      </image>
    </view>
 
    <view name="basic,detailed,video">
