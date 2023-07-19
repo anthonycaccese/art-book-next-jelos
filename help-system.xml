@@ -5,8 +5,8 @@
       <include name="off" displayName="Off" />
    </subset>
    <subset name="swap-a-b" displayName="Swap A/B Buttons">
-      <include name="true" displayName="True" />
       <include name="false" displayName="False" />
+      <include name="true" displayName="True" />
    </subset>
    <view name="system,basic,detailed,video">
       <helpsystem ifSubset="help-system-display:on" name="help">
