@@ -97,19 +97,6 @@ license:       creative commons CC-BY-NC-SA
    </view>
 
    <view name="system,basic,detailed,video">
-      <helpsystem ifSubset="help-system-display:on" name="help">
-         <textColor>FFFFFF77</textColor>
-         <iconColor>FFFFFF77</iconColor>
-         <iconUpDown>./_inc/images/help-dpad-updown.svg</iconUpDown>
-         <iconLeftRight>./_inc/images/help-dpad-leftright.svg</iconLeftRight>
-         <iconUpDownLeftRight>./_inc/images/help-dpad-updownleftright.svg</iconUpDownLeftRight>
-         <iconA ifSubset="swap-a-b:true">./_inc/images/help-button-east.svg</iconA>
-         <iconB ifSubset="swap-a-b:true">./_inc/images/help-button-south.svg</iconB>
-         <iconA ifSubset="swap-a-b:false">./_inc/images/help-button-south.svg</iconA>
-         <iconB ifSubset="swap-a-b:false">./_inc/images/help-button-east.svg</iconB>
-         <iconX>./_inc/images/help-button-north.svg</iconX>
-         <iconY>./_inc/images/help-button-west.svg</iconY>
-      </helpsystem>
       <image name="logo">
          <path>./_inc/systems/${system.theme}.svg</path>
          <path>${themeCustomizationsPath}logos/${system.theme}.svg</path>

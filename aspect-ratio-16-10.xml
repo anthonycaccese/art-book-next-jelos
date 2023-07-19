@@ -1,15 +1,7 @@
 <theme>
    <formatVersion>7</formatVersion>
 
-   <subset name="help-system-display" displayName="Help System Display">
-      <include name="on" displayName="On" />
-      <include name="off" displayName="Off" />
-   </subset>
-
-   <subset name="swap-a-b" displayName="Swap A/B Buttons">
-      <include name="true" displayName="True" />
-      <include name="false" displayName="False" />
-   </subset>
+   <include>./help-system.xml</include>
 
    <view name="screen">
       <batteryIndicator ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="batteryIndicator">
@@ -31,23 +23,6 @@
       <image ifSubset="status-bar-display:battery" name="status-bar-background" extra="true">
          <size>0.047916666666667 0.08</size><!-- 92 96 -->
       </image>
-      <helpsystem ifSubset="help-system-display:on" name="help">
-         <origin>0.5 0.5</origin>
-         <pos>0.5 0.9475</pos><!-- 50% 1137 -->
-         <fontSize>0.028333333333333</fontSize><!-- 34 -->
-      </helpsystem>
-      <image ifSubset="help-system-display:on" name="help-background" extra="static">
-         <origin>0 1</origin>
-         <pos>0 1</pos>
-         <size>1 0.104166666666667</size><!-- 100% 125 -->
-         <path>${spacerImage}</path>
-         <tile>true</tile>
-         <color>000000</color>
-      </image>
-      <helpsystem ifSubset="help-system-display:off" name="help">
-         <origin>0 0</origin>
-         <pos>1 1</pos>
-      </helpsystem>
    </view>
 
    <view name="system">

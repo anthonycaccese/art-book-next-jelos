@@ -24,7 +24,7 @@
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
-      <statusBarBackgroundColor>11111166</statusBarBackgroundColor>
+      <statusBarBackgroundColor>11111199</statusBarBackgroundColor>
       <statusBarIconColor>bbbbbb</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:art-book">
