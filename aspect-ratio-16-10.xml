@@ -6,6 +6,11 @@
       <include name="off" displayName="Off" />
    </subset>
 
+   <subset name="swap-a-b" displayName="Swap A/B Buttons">
+      <include name="true" displayName="True" />
+      <include name="false" displayName="False" />
+   </subset>
+
    <view name="screen">
       <batteryIndicator ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="batteryIndicator">
          <pos>0 0.018518518518519</pos><!-- 0 20 -->
