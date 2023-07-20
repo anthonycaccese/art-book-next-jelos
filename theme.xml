@@ -180,6 +180,7 @@ license:       creative commons CC-BY-NC-SA
          <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/${system.theme}.jpg</path>
          <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/${system.theme}.png</path>
          <color>${systemArtColor}</color>
+         <saturation>${systemArtSaturation}</saturation>
          <zIndex>2</zIndex>
       </image>
       <!-- System View Mask: Multi Artwork -->
@@ -189,6 +190,7 @@ license:       creative commons CC-BY-NC-SA
          <path ifSubset="system-view-style:multi-custom">${themeCustomizationsPath}backgrounds/_default.png</path>
          <path ifSubset="system-view-style:multi-custom">${themeCustomizationsPath}backgrounds/${system.theme}.png</path>
          <color>ffffffcc</color>
+         <saturation>${systemArtSaturation}</saturation>
       </image>
       <carousel ifSubset="system-view-style:multi|multi-custom" name="systemcarousel">
          <size>1 1</size>
@@ -213,6 +215,7 @@ license:       creative commons CC-BY-NC-SA
          <path>${themeCustomizationsPath}backgrounds/_default.png</path>
          <path>${themeCustomizationsPath}backgrounds/${system.theme}.jpg</path>
          <path>${themeCustomizationsPath}backgrounds/${system.theme}.png</path>
+         <saturation>${systemArtSaturation}</saturation>
          <zIndex>2</zIndex>
       </image>
       <!-- System View: No Artwork -->
