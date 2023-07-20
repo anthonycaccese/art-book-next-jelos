@@ -117,7 +117,7 @@
       <!-- System View -->
       <systemBackgroundColor>711521</systemBackgroundColor>
       <systemArtColor>DCD6B6</systemArtColor>
-      <systemArtSaturation>1</systemArtSaturation>
+      <systemArtSaturation>0.5</systemArtSaturation>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>711521</systemMaskColor>
       <systemLogoColor>DCD6B6</systemLogoColor>
