@@ -148,6 +148,7 @@ license:       creative commons CC-BY-NC-SA
          <logoSize>0.25 0.15</logoSize>
          <maxLogoCount>2</maxLogoCount>
          <scrollSound>./_inc/sounds/scroll.wav</scrollSound>
+         <defaultTransition>instant</defaultTransition>
       </carousel>
       <text name="systemInfo">
          <pos>1 1</pos>
