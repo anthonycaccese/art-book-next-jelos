@@ -67,6 +67,7 @@ license:       creative commons CC-BY-NC-SA
       <include name="centered" displayName="Centered Artwork" />
       <include name="multi" displayName="Multi Artwork" />
       <include name="no-artwork" displayName="No Artwork" />
+      <include name="centered-one-logo" displayName="Centered Artwork (One Logo)" />
       <include name="centered-custom" displayName="Centered Artwork (Custom)" />
       <include name="multi-custom" displayName="Multi Artwork (Custom)" />
       <include name="fullscreen-custom" displayName="Fullscreen Artwork (Custom)" />
@@ -78,6 +79,12 @@ license:       creative commons CC-BY-NC-SA
       <include name="metadata-on-immersive" displayName="Metadata On (Immersive)" />
       <include name="metadata-off" displayName="Metadata Off" />
       <include name="metadata-off-immersive" displayName="Metadata Off (Immersive)" />
+   </subset>
+
+   <!-- Fonts -->
+   <subset name="fonts" displayName="Fonts">
+      <include name="default" displayName="Default" />
+      <include name="custom" displayName="Custom" />
    </subset>
 
    <view name="screen">
@@ -157,6 +164,7 @@ license:       creative commons CC-BY-NC-SA
          <logoScale>2</logoScale>
          <logoSize>0.25 0.15</logoSize>
          <maxLogoCount>2</maxLogoCount>
+         <maxLogoCount ifSubset="system-view-style:centered-one-logo">1</maxLogoCount>
          <scrollSound>./_inc/sounds/scroll.wav</scrollSound>
          <defaultTransition>instant</defaultTransition>
       </carousel>
@@ -164,14 +172,14 @@ license:       creative commons CC-BY-NC-SA
          <pos>1 1</pos>
       </text>
       <!-- System View Mask: Centered Artwork -->
-      <image ifSubset="system-view-style:centered|centered-custom" name="system-art-mask" extra="true">
+      <image ifSubset="system-view-style:centered|centered-custom|centered-one-logo" name="system-art-mask" extra="true">
          <origin>0.5 0</origin>
          <pos>0.5 0</pos>
          <size>0 1</size>
          <color>${systemMaskColor}</color>
          <zIndex>4</zIndex>
       </image>
-      <image ifSubset="system-view-style:centered|centered-custom" name="system-art-fade" extra="true">
+      <image ifSubset="system-view-style:centered|centered-custom|centered-one-logo" name="system-art-fade" extra="true">
          <origin>0 0</origin>
          <pos>0 0</pos>
          <size>1 1</size>
@@ -180,7 +188,7 @@ license:       creative commons CC-BY-NC-SA
          <color>${systemArtFade}</color>
          <zIndex>3</zIndex>
       </image>
-      <image ifSubset="system-view-style:centered|centered-custom" name="system-art" extra="true">
+      <image ifSubset="system-view-style:centered|centered-custom|centered-one-logo" name="system-art" extra="true">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <size>0 1</size>
@@ -452,5 +460,7 @@ license:       creative commons CC-BY-NC-SA
    <include ifSubset="aspect-ratio:4-3">./aspect-ratio-4-3.xml</include>
    <include ifSubset="aspect-ratio:3-2">./aspect-ratio-3-2.xml</include>
    <include ifSubset="aspect-ratio:5-3">./aspect-ratio-5-3.xml</include>
+
+   <include ifSubset="fonts:custom">${themeCustomizationsPath}fonts.xml</include>
 
 </theme>

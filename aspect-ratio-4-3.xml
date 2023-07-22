@@ -31,7 +31,7 @@
       <text name="logoText">
          <fontSize>0.0875</fontSize><!-- 42 -->
       </text>
-      <image ifSubset="system-view-style:centered|centered-custom" name="system-art-mask" extra="true">
+      <image ifSubset="system-view-style:centered|centered-custom|centered-one-logo" name="system-art-mask" extra="true">
          <path>./_inc/images/system-art-mask-4-3.png</path>
       </image>
       <carousel ifSubset="system-view-style:multi|multi-custom" name="systemcarousel">
