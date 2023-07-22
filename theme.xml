@@ -46,6 +46,12 @@ license:       creative commons CC-BY-NC-SA
    <include>./colors.xml</include>
    <include ifSubset="color-scheme:custom">${themeCustomizationsPath}colors.xml</include>
 
+   <!-- Fonts -->
+   <subset name="fonts" displayName="Fonts">
+      <include name="default" displayName="Default" />
+      <include name="custom" displayName="Custom" />
+   </subset>
+
    <!-- Status Bar Display -->
    <subset name="status-bar-display" displayName="Status Bar Display">
       <include name="battery-text-network" displayName="Battery (%) + Network" />
@@ -79,12 +85,6 @@ license:       creative commons CC-BY-NC-SA
       <include name="metadata-on-immersive" displayName="Metadata On (Immersive)" />
       <include name="metadata-off" displayName="Metadata Off" />
       <include name="metadata-off-immersive" displayName="Metadata Off (Immersive)" />
-   </subset>
-
-   <!-- Fonts -->
-   <subset name="fonts" displayName="Fonts">
-      <include name="default" displayName="Default" />
-      <include name="custom" displayName="Custom" />
    </subset>
 
    <view name="screen">
