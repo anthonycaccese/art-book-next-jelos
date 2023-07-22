@@ -55,6 +55,13 @@ license:       creative commons CC-BY-NC-SA
       <include name="off" displayName="Off" />
    </subset>
 
+   <!-- Status Bar Transparency -->
+   <subset name="status-bar-transparency" displayName="Status Bar Transparency">
+      <include name="50-percent" displayName="50%" />
+      <include name="100-percent" displayName="100%" />
+      <include name="0-percent" displayName="0%" />
+   </subset>
+
    <!-- System View Style -->
    <subset name="system-view-style" displayName="System View Style">
       <include name="centered" displayName="Centered Artwork" />
@@ -127,6 +134,9 @@ license:       creative commons CC-BY-NC-SA
          <path>${spacerImage}</path>
          <tile>true</tile>
          <color>${statusBarBackgroundColor}</color>
+         <opacity ifSubset="status-bar-transparency:0-percent">1</opacity>
+         <opacity ifSubset="status-bar-transparency:50-percent">0.5</opacity>
+         <opacity ifSubset="status-bar-transparency:100-percent">0</opacity>
       </image>
    </view>
 
@@ -208,6 +218,15 @@ license:       creative commons CC-BY-NC-SA
          <zIndex>50</zIndex>
       </image>
       <!-- System View: Fullscreen Artwork -->
+      <image ifSubset="system-view-style:fullscreen-custom" name="system-art-fade" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <color>${systemArtFade}</color>
+         <zIndex>3</zIndex>
+      </image>
       <image ifSubset="system-view-style:fullscreen-custom" name="system-art" extra="true">
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>

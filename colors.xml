@@ -8,7 +8,7 @@
       <systemArtSaturation>1</systemArtSaturation>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>111111</systemMaskColor>
-      <systemLogoColor>dddddd</systemLogoColor>
+      <systemLogoColor>eeeeee</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>111111</gamelistListTextlistBackgroundColor>
       <gamelistListLogoColor>ffffffaa</gamelistListLogoColor>
@@ -25,8 +25,8 @@
       <helpTextColor>ffffff66</helpTextColor>
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
-      <statusBarBackgroundColor>11111199</statusBarBackgroundColor>
-      <statusBarIconColor>bbbbbb</statusBarIconColor>
+      <statusBarBackgroundColor>111111</statusBarBackgroundColor>
+      <statusBarIconColor>eeeeee</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:art-book">
       <backgroundColor>000000</backgroundColor>
@@ -36,7 +36,7 @@
       <systemArtSaturation>1</systemArtSaturation>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>111111</systemMaskColor>
-      <systemLogoColor>dddddd</systemLogoColor>
+      <systemLogoColor>eeeeee</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>111111</gamelistListTextlistBackgroundColor>
       <gamelistListLogoColor>ffffffaa</gamelistListLogoColor>
@@ -54,7 +54,7 @@
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
       <statusBarBackgroundColor>111111</statusBarBackgroundColor>
-      <statusBarIconColor>bbbbbb</statusBarIconColor>
+      <statusBarIconColor>eeeeee</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:steam-os">
       <backgroundColor>000000</backgroundColor>
@@ -64,7 +64,7 @@
       <systemArtSaturation>1</systemArtSaturation>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>0D141C</systemMaskColor>
-      <systemLogoColor>dddddd</systemLogoColor>
+      <systemLogoColor>eeeeee</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>0D141C</gamelistListTextlistBackgroundColor>
       <gamelistListLogoColor>ffffffaa</gamelistListLogoColor>
@@ -82,7 +82,7 @@
       <!-- Menu System -->
       <menuBackgroundColor>0D141C</menuBackgroundColor>
       <statusBarBackgroundColor>0D141C</statusBarBackgroundColor>
-      <statusBarIconColor>bbbbbb</statusBarIconColor>
+      <statusBarIconColor>eeeeee</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:snes">
       <backgroundColor>000000</backgroundColor>
@@ -92,7 +92,7 @@
       <systemArtSaturation>1</systemArtSaturation>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>231942</systemMaskColor>
-      <systemLogoColor>dddddd</systemLogoColor>
+      <systemLogoColor>eeeeee</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>231942</gamelistListTextlistBackgroundColor>
       <gamelistListLogoColor>ffffffaa</gamelistListLogoColor>
@@ -110,7 +110,7 @@
       <!-- Menu System -->
       <menuBackgroundColor>231942</menuBackgroundColor>
       <statusBarBackgroundColor>231942</statusBarBackgroundColor>
-      <statusBarIconColor>bbbbbb</statusBarIconColor>
+      <statusBarIconColor>eeeeee</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:famicom">
       <backgroundColor>000000</backgroundColor>
@@ -148,7 +148,7 @@
       <systemArtSaturation>1</systemArtSaturation>
       <systemArtFade>00000044</systemArtFade>
       <systemMaskColor>000000</systemMaskColor>
-      <systemLogoColor>dddddd</systemLogoColor>
+      <systemLogoColor>eeeeee</systemLogoColor>
       <!-- Gamelist View - List Variants -->
       <gamelistListTextlistBackgroundColor>111111</gamelistListTextlistBackgroundColor>
       <gamelistListLogoColor>ffffffaa</gamelistListLogoColor>
@@ -166,7 +166,7 @@
       <!-- Menu System -->
       <menuBackgroundColor>111111</menuBackgroundColor>
       <statusBarBackgroundColor>000000</statusBarBackgroundColor>
-      <statusBarIconColor>bbbbbb</statusBarIconColor>
+      <statusBarIconColor>eeeeee</statusBarIconColor>
    </variables>
    <variables ifSubset="color-scheme:grayscale">
       <backgroundColor>000000</backgroundColor>
