@@ -63,19 +63,18 @@ license:       creative commons CC-BY-NC-SA
 
    <!-- Status Bar Transparency -->
    <subset name="status-bar-transparency" displayName="Status Bar Transparency">
-      <include name="50-percent" displayName="50%" />
       <include name="100-percent" displayName="100%" />
+      <include name="50-percent" displayName="50%" />
       <include name="0-percent" displayName="0%" />
    </subset>
 
    <!-- System View Style -->
    <subset name="system-view-style" displayName="System View Style">
-      <include name="centered" displayName="Centered Artwork" />
       <include name="multi" displayName="Multi Artwork" />
-      <include name="no-artwork" displayName="No Artwork" />
+      <include name="centered" displayName="Centered Artwork" />
       <include name="centered-one-logo" displayName="Centered Artwork (One Logo)" />
+      <include name="no-artwork" displayName="No Artwork" />
       <include name="centered-custom" displayName="Centered Artwork (Custom)" />
-      <include name="multi-custom" displayName="Multi Artwork (Custom)" />
       <include name="fullscreen-custom" displayName="Fullscreen Artwork (Custom)" />
    </subset>
 
