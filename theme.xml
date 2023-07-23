@@ -134,7 +134,7 @@ license:       creative commons CC-BY-NC-SA
          <tile>true</tile>
          <zIndex>0</zIndex>
       </image>
-      <image ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="status-bar-background" extra="true">
+      <image ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="status-bar-background" extra="static">
          <origin>1 0</origin>
          <pos>1 0</pos>
          <path>${spacerImage}</path>
