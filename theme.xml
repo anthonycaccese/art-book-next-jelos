@@ -1,5 +1,5 @@
 <!--
-theme name:    Art Book Next (JELOS Edition)
+theme name:    Art Book Next
 author:        Anthony Caccese
 license:       creative commons CC-BY-NC-SA
 -->
@@ -13,8 +13,21 @@ license:       creative commons CC-BY-NC-SA
       <fontRegular>./_inc/fonts/Oxygen-Regular.ttf</fontRegular>
       <fontLogo>./_inc/fonts/ChangaOne-Italic.ttf</fontLogo>
       <spacerImage>./_inc/images/space.png</spacerImage>
-      <themeCustomizationsPath>~/roms/jelos/theme-customizations/art-book-next/</themeCustomizationsPath>
+      <themeCustomizationsPathJELOS>~/roms/jelos/theme-customizations/art-book-next/</themeCustomizationsPathJELOS>
+      <themeCustomizationsPathBatocera>~/</themeCustomizationsPathBatocera>
+      <themeCustomizationsPathRetroBat>~/.emulationstation/theme-customizations/art-book-next/</themeCustomizationsPathRetroBat>
+      <themeCustomizationsPathAmberElec>~/roms/amberelec/theme-customizations/art-book-next/</themeCustomizationsPathAmberElec>
+      <themeCustomizationsPathEmuElec>~/roms/emuelec/jelos/theme-customizations/art-book-next/</themeCustomizationsPathEmuElec>
    </variables>
+
+   <!-- Distribution -->
+   <subset name="distribution" displayName="Distribution">
+      <include name="jelos" displayName="JELOS" />
+      <include name="batocera" displayName="Batocera" />
+      <include name="retrobat" displayName="RetroBat" />
+      <include name="amberelec" displayName="AmberElec" />
+      <include name="emuelec" displayName="EmuElec" />
+   </subset>
 
    <!-- Aspect Ratio -->
    <subset name="aspect-ratio" displayName="Aspect Ratio">
@@ -44,7 +57,11 @@ license:       creative commons CC-BY-NC-SA
       <include name="custom" displayName="Custom" />
    </subset>
    <include>./colors.xml</include>
-   <include ifSubset="color-scheme:custom">${themeCustomizationsPath}colors.xml</include>
+   <include ifSubset="color-scheme:custom,distribution:jelos">${themeCustomizationsPathJELOS}colors.xml</include>
+   <include ifSubset="color-scheme:custom,distribution:batocera">${themeCustomizationsPathBatocera}colors.xml</include>
+   <include ifSubset="color-scheme:custom,distribution:retrobat">${themeCustomizationsPathRetroBat}colors.xml</include>
+   <include ifSubset="color-scheme:custom,distribution:amberelec">${themeCustomizationsPathAmberElec}colors.xml</include>
+   <include ifSubset="color-scheme:custom,distribution:emuelec">${themeCustomizationsPathEmuElec}colors.xml</include>
 
    <!-- Fonts -->
    <subset name="fonts" displayName="Fonts">
@@ -71,10 +88,11 @@ license:       creative commons CC-BY-NC-SA
    <!-- System View Style -->
    <subset name="system-view-style" displayName="System View Style">
       <include name="multi" displayName="Multi Artwork" />
-      <include name="centered" displayName="Centered Artwork" />
-      <include name="centered-one-logo" displayName="Centered Artwork (One Logo)" />
+      <include name="centered" displayName="Centered Artwork (Multiple Logos)" />
+      <include name="centered-one-logo" displayName="Centered Artwork (Single Logo)" />
       <include name="no-artwork" displayName="No Artwork" />
       <include name="centered-custom" displayName="Centered Artwork (Custom)" />
+      <include name="multi-custom" displayName="Multi Artwork (Custom)" />
       <include name="fullscreen-custom" displayName="Fullscreen Artwork (Custom)" />
    </subset>
 
@@ -112,8 +130,16 @@ license:       creative commons CC-BY-NC-SA
    <view name="system,basic,detailed,video">
       <image name="logo">
          <path>./_inc/systems/${system.theme}.svg</path>
-         <path>${themeCustomizationsPath}logos/${system.theme}.svg</path>
-         <path>${themeCustomizationsPath}logos/${system.theme}.png</path>
+         <path ifSubset="color-scheme:custom,distribution:jelos">${themeCustomizationsPathJELOS}logos/${system.theme}.svg</path>
+         <path ifSubset="color-scheme:custom,distribution:jelos">${themeCustomizationsPathJELOS}logos/${system.theme}.png</path>
+         <path ifSubset="color-scheme:custom,distribution:batocera">${themeCustomizationsPathBatocera}logos/${system.theme}.svg</path>
+         <path ifSubset="color-scheme:custom,distribution:batocera">${themeCustomizationsPathBatocera}logos/${system.theme}.png</path>
+         <path ifSubset="color-scheme:custom,distribution:retrobat">${themeCustomizationsPathRetroBat}logos/${system.theme}.svg</path>
+         <path ifSubset="color-scheme:custom,distribution:retrobat">${themeCustomizationsPathRetroBat}logos/${system.theme}.png</path>
+         <path ifSubset="color-scheme:custom,distribution:amberelec">${themeCustomizationsPathAmberElec}logos/${system.theme}.svg</path>
+         <path ifSubset="color-scheme:custom,distribution:amberelec">${themeCustomizationsPathAmberElec}logos/${system.theme}.png</path>
+         <path ifSubset="color-scheme:custom,distribution:emuelec">${themeCustomizationsPathEmuElec}logos/${system.theme}.svg</path>
+         <path ifSubset="color-scheme:custom,distribution:emuelec">${themeCustomizationsPathEmuElec}logos/${system.theme}.png</path>
       </image>
       <text name="logoText">
          <fontPath>${fontLogo}</fontPath>
@@ -121,11 +147,6 @@ license:       creative commons CC-BY-NC-SA
          <lineSpacing>1</lineSpacing>
          <alignment>center</alignment>
       </text>
-      <!--<text name="themeCustomizationsPathTest" extra="true">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <text>${themeCustomizationsPath}</text>
-      </text>-->
       <image name="background" extra="true">
          <origin>0 0</origin>
          <pos>0 0</pos>
@@ -193,10 +214,26 @@ license:       creative commons CC-BY-NC-SA
          <size>0 1</size>
          <path>./_inc/systems/_default.png</path>
          <path>./_inc/systems/${system.theme}.png</path>
-         <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/_default.jpg</path>
-         <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/_default.png</path>
-         <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/${system.theme}.jpg</path>
-         <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/${system.theme}.png</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:jelos">${themeCustomizationsPathJELOS}backgrounds/_default.jpg</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:jelos">${themeCustomizationsPathJELOS}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:jelos">${themeCustomizationsPathJELOS}backgrounds/${system.theme}.jpg</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:jelos">${themeCustomizationsPathJELOS}backgrounds/${system.theme}.png</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/_default.jpg</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/${system.theme}.jpg</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/${system.theme}.png</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/_default.jpg</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/${system.theme}.jpg</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/${system.theme}.png</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/_default.jpg</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/${system.theme}.jpg</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/${system.theme}.png</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/_default.jpg</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/${system.theme}.jpg</path>
+         <path ifSubset="system-view-style:centered-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/${system.theme}.png</path>
          <color>${systemArtColor}</color>
          <saturation>${systemArtSaturation}</saturation>
          <zIndex>2</zIndex>
@@ -205,8 +242,16 @@ license:       creative commons CC-BY-NC-SA
       <image ifSubset="system-view-style:multi|multi-custom" name="logo">
          <path>./_inc/systems/_default.png</path>
          <path>./_inc/systems/${system.theme}.png</path>
-         <path ifSubset="system-view-style:multi-custom">${themeCustomizationsPath}backgrounds/_default.png</path>
-         <path ifSubset="system-view-style:multi-custom">${themeCustomizationsPath}backgrounds/${system.theme}.png</path>
+         <path ifSubset="system-view-style:multi-custom,distribution:jelos">${themeCustomizationsPathJELOS}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:multi-custom,distribution:jelos">${themeCustomizationsPathJELOS}backgrounds/${system.theme}.png</path>
+         <path ifSubset="system-view-style:multi-custom,distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:multi-custom,distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/${system.theme}.png</path>
+         <path ifSubset="system-view-style:multi-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:multi-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/${system.theme}.png</path>
+         <path ifSubset="system-view-style:multi-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:multi-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/${system.theme}.png</path>
+         <path ifSubset="system-view-style:multi-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/_default.png</path>
+         <path ifSubset="system-view-style:multi-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/${system.theme}.png</path>
          <color>ffffffcc</color>
          <saturation>${systemArtSaturation}</saturation>
       </image>
@@ -238,10 +283,26 @@ license:       creative commons CC-BY-NC-SA
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <size>0 1</size>
-         <path>${themeCustomizationsPath}backgrounds/_default.jpg</path>
-         <path>${themeCustomizationsPath}backgrounds/_default.png</path>
-         <path>${themeCustomizationsPath}backgrounds/${system.theme}.jpg</path>
-         <path>${themeCustomizationsPath}backgrounds/${system.theme}.png</path>
+         <path ifSubset="distribution:jelos">${themeCustomizationsPathJELOS}backgrounds/_default.jpg</path>
+         <path ifSubset="distribution:jelos">${themeCustomizationsPathJELOS}backgrounds/_default.png</path>
+         <path ifSubset="distribution:jelos">${themeCustomizationsPathJELOS}backgrounds/${system.theme}.jpg</path>
+         <path ifSubset="distribution:jelos">${themeCustomizationsPathJELOS}backgrounds/${system.theme}.png</path>
+         <path ifSubset="distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/_default.jpg</path>
+         <path ifSubset="distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/_default.png</path>
+         <path ifSubset="distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/${system.theme}.jpg</path>
+         <path ifSubset="distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/${system.theme}.png</path>
+         <path ifSubset="distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/_default.jpg</path>
+         <path ifSubset="distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/_default.png</path>
+         <path ifSubset="distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/${system.theme}.jpg</path>
+         <path ifSubset="distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/${system.theme}.png</path>
+         <path ifSubset="distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/_default.jpg</path>
+         <path ifSubset="distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/_default.png</path>
+         <path ifSubset="distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/${system.theme}.jpg</path>
+         <path ifSubset="distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/${system.theme}.png</path>
+         <path ifSubset="distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/_default.jpg</path>
+         <path ifSubset="distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/_default.png</path>
+         <path ifSubset="distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/${system.theme}.jpg</path>
+         <path ifSubset="distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/${system.theme}.png</path>
          <saturation>${systemArtSaturation}</saturation>
          <zIndex>2</zIndex>
       </image>
@@ -460,6 +521,11 @@ license:       creative commons CC-BY-NC-SA
    <include ifSubset="aspect-ratio:3-2">./aspect-ratio-3-2.xml</include>
    <include ifSubset="aspect-ratio:5-3">./aspect-ratio-5-3.xml</include>
 
-   <include ifSubset="fonts:custom">${themeCustomizationsPath}fonts.xml</include>
+   <!-- Custom Fonts -->
+   <include ifSubset="fonts:custom,distribution:jelos">${themeCustomizationsPathJELOS}fonts.xml</include>
+   <include ifSubset="fonts:custom,distribution:batocera">${themeCustomizationsPathBatocera}fonts.xml</include>
+   <include ifSubset="fonts:custom,distribution:retrobat">${themeCustomizationsPathRetroBat}fonts.xml</include>
+   <include ifSubset="fonts:custom,distribution:amberelec">${themeCustomizationsPathAmberElec}fonts.xml</include>
+   <include ifSubset="fonts:custom,distribution:emuelec">${themeCustomizationsPathEmuElec}fonts.xml</include>
 
 </theme>
