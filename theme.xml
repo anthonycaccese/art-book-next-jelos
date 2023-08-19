@@ -40,6 +40,7 @@ license:       creative commons CC-BY-NC-SA
       <!--<include if="${screen.width} == '1152' && ${screen.height} == '1920'" name="5-3" displayName="5:3 (Detected)" />
       <include if="${screen.width} == '1200' && ${screen.height} == '720'" name="5-3" displayName="5:3 (Detected)" />
       <include if="${screen.width} == '1800' && ${screen.height} == '1080'" name="5-3" displayName="5:3 (Detected)" />
+      <include if="${screen.width} == '480' && ${screen.height} == '480'" name="1-1" displayName="1:1 (Detected)" />
       <include if="{screen.ratio} == '4/3'" name="4-3" displayName="4:3 (Detected)" />
       <include if="{screen.ratio} == '3/2'" name="3-2" displayName="3:2 (Detected)" />
       <include if="{screen.ratio} == '16/9'" name="16-9" displayName="16:9 (Detected)" />
