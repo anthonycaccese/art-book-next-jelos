@@ -4,7 +4,7 @@
    <view name="screen">
       <batteryIndicator ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="batteryIndicator">
          <pos>0 0.03125</pos><!-- 0 15 -->
-         <size>0.978125 0.066666666666667</size><!-- 626 32 -->
+         <size>0.978125 0.05</size><!-- 626 32 -->
       </batteryIndicator>
    </view>
 
