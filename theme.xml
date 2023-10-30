@@ -209,6 +209,15 @@ license:       creative commons CC-BY-NC-SA
          <path>./_inc/systems/${system.theme}.svg</path>
          <zIndex>50</zIndex>
       </image>
+      <image ifSubset="system-view-style:multi|multi-custom" name="system-carousel-bakground" extra="true">
+         <origin>0.5 0</origin>
+         <pos>0.5 0</pos>
+         <size>1 1</size>
+         <tile>true</tile>
+         <color>${systemCarouselBackgroundColor}</color>
+         <path>${spacerImage}</path>
+         <zIndex>2</zIndex>
+      </image>
       <!-- System View: Fullscreen Artwork -->
       <image ifSubset="system-view-style:fullscreen-custom" name="system-art-fade" extra="true">
          <origin>0 0</origin>
