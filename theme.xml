@@ -15,18 +15,12 @@ license:       creative commons CC-BY-NC-SA
       <spacerImage>./_inc/images/space.png</spacerImage>
       <themeCustomizationsPathJELOS>~/roms/jelos/theme-customizations/art-book-next/</themeCustomizationsPathJELOS>
       <themeCustomizationsPathBatocera>~/</themeCustomizationsPathBatocera>
-      <themeCustomizationsPathRetroBat>~/.emulationstation/theme-customizations/art-book-next/</themeCustomizationsPathRetroBat>
-      <themeCustomizationsPathAmberElec>~/roms/amberelec/theme-customizations/art-book-next/</themeCustomizationsPathAmberElec>
-      <themeCustomizationsPathEmuElec>~/roms/emuelec/jelos/theme-customizations/art-book-next/</themeCustomizationsPathEmuElec>
    </variables>
 
    <!-- Distribution -->
    <subset name="distribution" displayName="Distribution">
       <include name="jelos" displayName="JELOS" />
       <include name="batocera" displayName="Batocera" />
-      <include name="retrobat" displayName="RetroBat" />
-      <include name="amberelec" displayName="AmberElec" />
-      <include name="emuelec" displayName="EmuElec" />
    </subset>
 
    <!-- Aspect Ratio -->
@@ -61,30 +55,11 @@ license:       creative commons CC-BY-NC-SA
    <include>./colors.xml</include>
    <include ifSubset="color-scheme:custom,distribution:jelos">${themeCustomizationsPathJELOS}colors.xml</include>
    <include ifSubset="color-scheme:custom,distribution:batocera">${themeCustomizationsPathBatocera}colors.xml</include>
-   <include ifSubset="color-scheme:custom,distribution:retrobat">${themeCustomizationsPathRetroBat}colors.xml</include>
-   <include ifSubset="color-scheme:custom,distribution:amberelec">${themeCustomizationsPathAmberElec}colors.xml</include>
-   <include ifSubset="color-scheme:custom,distribution:emuelec">${themeCustomizationsPathEmuElec}colors.xml</include>
 
    <!-- Fonts -->
-   <subset name="fonts" displayName="Fonts">
+   <subset name="fonts" displayName="Font Size">
       <include name="default" displayName="Default" />
       <include name="custom" displayName="Custom" />
-   </subset>
-
-   <!-- Status Bar Display -->
-   <subset name="status-bar-display" displayName="Status Bar Display">
-      <include name="battery-text-network" displayName="Battery (%) + Network" />
-      <include name="battery-network" displayName="Battery + Network" />
-      <include name="battery-text" displayName="Battery (%)" />
-      <include name="battery" displayName="Battery" />
-      <include name="off" displayName="Off" />
-   </subset>
-
-   <!-- Status Bar Transparency -->
-   <subset name="status-bar-transparency" displayName="Status Bar Transparency">
-      <include name="100-percent" displayName="100%" />
-      <include name="50-percent" displayName="50%" />
-      <include name="0-percent" displayName="0%" />
    </subset>
 
    <!-- System View Style -->
@@ -113,10 +88,7 @@ license:       creative commons CC-BY-NC-SA
       <text name="clock">
          <pos>1 1</pos>
       </text>
-      <batteryIndicator ifSubset="status-bar-display:off" name="batteryIndicator">
-         <pos>1 1</pos>
-      </batteryIndicator>
-      <batteryIndicator ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="batteryIndicator">
+      <batteryIndicator name="batteryIndicator">
          <color>${statusBarIconColor}</color>
          <itemSpacing>0</itemSpacing>
          <full>./_inc/images/battery-100-vertical.svg</full>
@@ -136,12 +108,6 @@ license:       creative commons CC-BY-NC-SA
          <path ifSubset="color-scheme:custom,distribution:jelos">${themeCustomizationsPathJELOS}logos/${system.theme}.png</path>
          <path ifSubset="color-scheme:custom,distribution:batocera">${themeCustomizationsPathBatocera}logos/${system.theme}.svg</path>
          <path ifSubset="color-scheme:custom,distribution:batocera">${themeCustomizationsPathBatocera}logos/${system.theme}.png</path>
-         <path ifSubset="color-scheme:custom,distribution:retrobat">${themeCustomizationsPathRetroBat}logos/${system.theme}.svg</path>
-         <path ifSubset="color-scheme:custom,distribution:retrobat">${themeCustomizationsPathRetroBat}logos/${system.theme}.png</path>
-         <path ifSubset="color-scheme:custom,distribution:amberelec">${themeCustomizationsPathAmberElec}logos/${system.theme}.svg</path>
-         <path ifSubset="color-scheme:custom,distribution:amberelec">${themeCustomizationsPathAmberElec}logos/${system.theme}.png</path>
-         <path ifSubset="color-scheme:custom,distribution:emuelec">${themeCustomizationsPathEmuElec}logos/${system.theme}.svg</path>
-         <path ifSubset="color-scheme:custom,distribution:emuelec">${themeCustomizationsPathEmuElec}logos/${system.theme}.png</path>
       </image>
       <text name="logoText">
          <fontPath>${fontLogo}</fontPath>
@@ -156,16 +122,6 @@ license:       creative commons CC-BY-NC-SA
          <path>${spacerImage}</path>
          <tile>true</tile>
          <zIndex>0</zIndex>
-      </image>
-      <image ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="status-bar-background" extra="static">
-         <origin>1 0</origin>
-         <pos>1 0</pos>
-         <path>${spacerImage}</path>
-         <tile>true</tile>
-         <color>${statusBarBackgroundColor}</color>
-         <opacity ifSubset="status-bar-transparency:0-percent">1</opacity>
-         <opacity ifSubset="status-bar-transparency:50-percent">0.5</opacity>
-         <opacity ifSubset="status-bar-transparency:100-percent">0</opacity>
       </image>
    </view>
 
@@ -224,18 +180,6 @@ license:       creative commons CC-BY-NC-SA
          <path ifSubset="system-view-style:centered-custom,distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/_default.png</path>
          <path ifSubset="system-view-style:centered-custom,distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/${system.theme}.jpg</path>
          <path ifSubset="system-view-style:centered-custom,distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/${system.theme}.png</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/_default.jpg</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/_default.png</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/${system.theme}.jpg</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/${system.theme}.png</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/_default.jpg</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/_default.png</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/${system.theme}.jpg</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/${system.theme}.png</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/_default.jpg</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/_default.png</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/${system.theme}.jpg</path>
-         <path ifSubset="system-view-style:centered-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/${system.theme}.png</path>
          <color>${systemArtColor}</color>
          <saturation>${systemArtSaturation}</saturation>
          <zIndex>2</zIndex>
@@ -248,12 +192,6 @@ license:       creative commons CC-BY-NC-SA
          <path ifSubset="system-view-style:multi-custom,distribution:jelos">${themeCustomizationsPathJELOS}backgrounds/${system.theme}.png</path>
          <path ifSubset="system-view-style:multi-custom,distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/_default.png</path>
          <path ifSubset="system-view-style:multi-custom,distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/${system.theme}.png</path>
-         <path ifSubset="system-view-style:multi-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/_default.png</path>
-         <path ifSubset="system-view-style:multi-custom,distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/${system.theme}.png</path>
-         <path ifSubset="system-view-style:multi-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/_default.png</path>
-         <path ifSubset="system-view-style:multi-custom,distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/${system.theme}.png</path>
-         <path ifSubset="system-view-style:multi-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/_default.png</path>
-         <path ifSubset="system-view-style:multi-custom,distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/${system.theme}.png</path>
          <color>ffffffcc</color>
          <saturation>${systemArtSaturation}</saturation>
       </image>
@@ -293,18 +231,6 @@ license:       creative commons CC-BY-NC-SA
          <path ifSubset="distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/_default.png</path>
          <path ifSubset="distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/${system.theme}.jpg</path>
          <path ifSubset="distribution:batocera">${themeCustomizationsPathBatocera}backgrounds/${system.theme}.png</path>
-         <path ifSubset="distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/_default.jpg</path>
-         <path ifSubset="distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/_default.png</path>
-         <path ifSubset="distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/${system.theme}.jpg</path>
-         <path ifSubset="distribution:retrobat">${themeCustomizationsPathRetroBat}backgrounds/${system.theme}.png</path>
-         <path ifSubset="distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/_default.jpg</path>
-         <path ifSubset="distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/_default.png</path>
-         <path ifSubset="distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/${system.theme}.jpg</path>
-         <path ifSubset="distribution:amberelec">${themeCustomizationsPathAmberElec}backgrounds/${system.theme}.png</path>
-         <path ifSubset="distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/_default.jpg</path>
-         <path ifSubset="distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/_default.png</path>
-         <path ifSubset="distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/${system.theme}.jpg</path>
-         <path ifSubset="distribution:emuelec">${themeCustomizationsPathEmuElec}backgrounds/${system.theme}.png</path>
          <saturation>${systemArtSaturation}</saturation>
          <zIndex>2</zIndex>
       </image>
@@ -527,8 +453,5 @@ license:       creative commons CC-BY-NC-SA
    <!-- Custom Fonts -->
    <include ifSubset="fonts:custom,distribution:jelos">${themeCustomizationsPathJELOS}fonts.xml</include>
    <include ifSubset="fonts:custom,distribution:batocera">${themeCustomizationsPathBatocera}fonts.xml</include>
-   <include ifSubset="fonts:custom,distribution:retrobat">${themeCustomizationsPathRetroBat}fonts.xml</include>
-   <include ifSubset="fonts:custom,distribution:amberelec">${themeCustomizationsPathAmberElec}fonts.xml</include>
-   <include ifSubset="fonts:custom,distribution:emuelec">${themeCustomizationsPathEmuElec}fonts.xml</include>
 
 </theme>

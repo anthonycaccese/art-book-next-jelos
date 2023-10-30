@@ -4,25 +4,10 @@
    <include>./help-system.xml</include>
 
    <view name="screen">
-      <batteryIndicator ifSubset="status-bar-display:battery-network|battery-text-network|battery|battery-text" name="batteryIndicator">
+      <batteryIndicator name="batteryIndicator">
          <pos>0 0.018518518518519</pos><!-- 0 20 -->
          <size>0.989583333333333 0.041666666666667</size><!-- 1900 50 -->
       </batteryIndicator>
-   </view>
-
-   <view name="system,basic,detailed,video">
-      <image ifSubset="status-bar-display:battery-text-network" name="status-bar-background" extra="true">
-         <size>0.104166666666667 0.08</size><!-- 200 96 -->
-      </image>
-      <image ifSubset="status-bar-display:battery-network" name="status-bar-background" extra="true">
-         <size>0.077083333333333 0.08</size><!-- 148 96 -->
-      </image>
-      <image ifSubset="status-bar-display:battery-text" name="status-bar-background" extra="true">
-         <size>0.076041666666667 0.08</size><!-- 146 96 -->
-      </image>
-      <image ifSubset="status-bar-display:battery" name="status-bar-background" extra="true">
-         <size>0.047916666666667 0.08</size><!-- 92 96 -->
-      </image>
    </view>
 
    <view name="system">
