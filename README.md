@@ -1,8 +1,6 @@
-# Art Book Next for EmulationStation
-A simple theme for the version of EmulationStation used in [Batocera](https://retropie.org.uk/).  
+# Art Book Next for JELOS
+A simple theme for the version of EmulationStation used in [JELOS](https://www.jelos.org).  
 Based on the style of a coffee table book.
-
-This version of the theme works with all distributions that leverage the Batocera fork of EmulationStation.  This includes [Batocera](https://batocera.org/), [JELOS](https://jelos.org/) and [RetroBat](https://www.retrobat.org/)
 
 ## Preview
 | ![system view](https://github.com/anthonycaccese/art-book-next-es/assets/1454947/c0252388-2268-444c-ae3d-07f15b87a98c) | ![menu](https://github.com/anthonycaccese/art-book-next-es/assets/1454947/39653703-f6e8-4940-98fc-66ce1c5af271) | 
