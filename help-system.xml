@@ -1,6 +1,6 @@
 <theme>
    <formatVersion>7</formatVersion>
-   <subset name="swap-a-b" displayName="Swap A/B Buttons">
+   <subset name="swap-a-b" displayName="Switch A &amp; B Buttons in EmulationStation">
       <include name="false" displayName="False" />
       <include name="true" displayName="True" />
    </subset>
