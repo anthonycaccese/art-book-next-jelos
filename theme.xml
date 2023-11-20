@@ -66,12 +66,6 @@ license:       creative commons CC-BY-NC-SA
       <include name="metadata-off-immersive" displayName="Metadata Off (Immersive)" />
    </subset>
 
-   <!-- Gamelist View Loop Video -->
-   <subset name="gamelist-loop-video" displayName="Gamelist View: Loop Video">
-      <include name="off" displayName="Off" />
-      <include name="on" displayName="On" />
-   </subset>
-
    <view name="screen">
       <controllerActivity name="controllerActivity">
          <visible>false</visible>
@@ -371,8 +365,6 @@ license:       creative commons CC-BY-NC-SA
          <color ifSubset="gamelist-view-style:metadata-on-immersive">FFFFFFDD</color>
          <color ifSubset="gamelist-view-style:metadata-off-immersive">FFFFFF99</color>
          <zIndex>3</zIndex>
-         <loops ifSubset="gamelist-loop-video:off">0</loops>
-         <loops ifSubset="gamelist-loop-video:on">-1</loops>
       </video>
    </view>
 
