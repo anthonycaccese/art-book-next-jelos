@@ -127,7 +127,7 @@
       <image ifSubset="gamelist-view-style:metadata-on-immersive" name="md_marquee">
          <origin>1 1</origin>
          <pos>0.973958333333333 0.652777777777778</pos><!-- 1870 705 -->
-         <maxSize>0.15625 0.2</maxSize><!-- 780 216 -->
+         <maxSize>0.15625 0.2</maxSize><!-- 300 216 -->
       </image>
    </view>
    <view ifSubset="gamelist-view-style:metadata-on|metadata-on-immersive" name="detailed">
