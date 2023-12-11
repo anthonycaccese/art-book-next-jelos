@@ -2,6 +2,8 @@
 A simple theme for the version of EmulationStation used in [JELOS](https://www.jelos.org).  
 Based on the style of a coffee table book.
 
+*If you are using Batocera, ES-DE or Retropie please see the "Versions for other ES forks" section below.*
+
 ## Preview
 | ![system view](https://github.com/anthonycaccese/art-book-next-es/assets/1454947/c0252388-2268-444c-ae3d-07f15b87a98c) | ![menu](https://github.com/anthonycaccese/art-book-next-es/assets/1454947/39653703-f6e8-4940-98fc-66ce1c5af271) | 
 | -- | -- |
@@ -14,7 +16,6 @@ The following options can be changed directly from the main menu under `UI Setti
 
 | Setting | Description | Options |
 | -- | -- | -- |
-| Distribution | Used to define which folder to look in for Theme Customization files. | `Batocera`, `JELOS`, `RetroBat` | 
 | Aspect Ratio | Enables you to select the correct aspect ratio for your screen.  This will automatically set itself so you should not need to change it but if the theme layout looks odd or spacing looks incorrect you can use this setting to make sure the aspect ratio matches your screen. | `16:9`, `16:10`, `4:3`, `3:2`, `5:3`, `1:1` |
 | Color Scheme | Sets the color scheme that is used for the theme.  There is a set of prebuilt color schemes that you can select and an option to supply your custom color scheme (selected by choosing `custom`).  You can see details on customizations below under [Theme Customziations](#theme-customizations). | `Art Book Next`, `Art Book`, `Steam OS`, `SNES`, `Famicom`, `Black`, `Grayscale`, `Custom` |
 | Font Size | When this is set to custom it allows you to define custom font sizes for the gamelist.  You can see details on customizations below under [Theme Customziations](#theme-customizations). | `Default`, `Custom` |
@@ -26,12 +27,8 @@ The following options can be changed directly from the main menu under `UI Setti
 Art Book Next allows customizations to artwork, colors and fonts without the need to edit the source XML.  This enables you to change the look of the theme and still retain any changes when your OS is updated.
 
 ### Start Here 
-- Make sure the `Distribution` setting is set to the correct value for your current OS (e.g. Batocera, JELOS or RetroBat)
-- This value determines the folder where you will add your customizations
-    - Batocera = `userdata/theme-customizations/art-book-next/`
-    - JELOS = `storage/roms/jelos/theme-customizations/art-book-next/`
-    - Retrobat = `C:\RetroBat\emulationstation\.emulationstation\theme-customizations\art-book-next\`
-- Create the folders that matche your distribution and then move on to the options below... 
+- Create the following folder and then move on to the options below:
+- `storage/roms/jelos/theme-customizations/art-book-next/`
 
 ### Background Art
 
@@ -94,6 +91,7 @@ You can modify the font size used to display gamelists
 ### Versions for other ES forks:
 * If you use Retropie... then check out the version [here](https://github.com/anthonycaccese/art-book-next-retropie).  The Retropie version has all the same base features but you have to change them through the XML directly (as Retropie's theme engine does not have a menu for changing theme options)
 * If you use ES-DE... then the ES-DE version [here](https://github.com/anthonycaccese/art-book-next-es-de) will work out of the box with that distribution.  When used with ES-DE the theme comes with additional support for navigation sound sets.
+* If you use Batocera... then the version [here](https://github.com/anthonycaccese/art-book-next-es) will work out of the box with that distribution.
 
 ### **Acknowledgments**
 * Most system logos were sourced and modified from the excellent work done by Dan Patrick [here](https://archive.org/details/console-logos-professionally-redrawn-plus-official-versions).  I modified each to be compatible with EmulationStation's current SVG support.
