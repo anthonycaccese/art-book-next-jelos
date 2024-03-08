@@ -34,8 +34,7 @@ license:       creative commons CC-BY-NC-SA
       <include name="steam-os" displayName="Steam OS" />
       <include name="snes" displayName="SNES" />
       <include name="famicom" displayName="Famicom" />
-      <include name="black" displayName="Black" />
-      <include name="grayscale" displayName="Grayscale" />
+      <include name="noir" displayName="Noir" />
       <include name="custom" displayName="Custom" />
    </subset>
    <include>./colors.xml</include>
@@ -88,7 +87,7 @@ license:       creative commons CC-BY-NC-SA
 
    <view name="system,basic,detailed,video">
       <image name="logo">
-         <path>./_inc/systems/${system.theme}.svg</path>
+         <path>./_inc/systems/logos/${system.theme}.svg</path>
          <path ifSubset="color-scheme:custom">${themeCustomizationsPath}logos/${system.theme}.svg</path>
          <path ifSubset="color-scheme:custom">${themeCustomizationsPath}logos/${system.theme}.png</path>
       </image>
@@ -153,8 +152,8 @@ license:       creative commons CC-BY-NC-SA
          <origin>0.5 0.5</origin>
          <pos>0.5 0.5</pos>
          <size>0 1</size>
-         <path>./_inc/systems/_default.png</path>
-         <path>./_inc/systems/${system.theme}.png</path>
+         <path>./_inc/systems/${artworkSource}/_default.png</path>
+         <path>./_inc/systems/${artworkSource}/${system.theme}.png</path>
          <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/_default.jpg</path>
          <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/_default.png</path>
          <path ifSubset="system-view-style:centered-custom">${themeCustomizationsPath}backgrounds/${system.theme}.jpg</path>
@@ -165,8 +164,8 @@ license:       creative commons CC-BY-NC-SA
       </image>
       <!-- System View Mask: Multi Artwork -->
       <image ifSubset="system-view-style:multi|multi-custom" name="logo">
-         <path>./_inc/systems/_default.png</path>
-         <path>./_inc/systems/${system.theme}.png</path>
+         <path>./_inc/systems/${artworkSource}/_default.png</path>
+         <path>./_inc/systems/${artworkSource}/${system.theme}.png</path>
          <path ifSubset="system-view-style:multi-custom">${themeCustomizationsPath}backgrounds/_default.png</path>
          <path ifSubset="system-view-style:multi-custom">${themeCustomizationsPath}backgrounds/${system.theme}.png</path>
          <color>ffffffcc</color>
@@ -183,7 +182,7 @@ license:       creative commons CC-BY-NC-SA
          <pos>0.5 0.5</pos>
          <maxSize>0.5 0.3</maxSize>
          <color>${systemLogoColor}</color>
-         <path>./_inc/systems/${system.theme}.svg</path>
+         <path>./_inc/systems/logos/${system.theme}.svg</path>
          <path ifSubset="color-scheme:custom">${themeCustomizationsPath}logos/${system.theme}.svg</path>
          <path ifSubset="color-scheme:custom">${themeCustomizationsPath}logos/${system.theme}.png</path>
          <zIndex>50</zIndex>
