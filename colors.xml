@@ -155,4 +155,39 @@
       <statusBarBackgroundColor>711521</statusBarBackgroundColor>
       <statusBarIconColor>DCD6B6</statusBarIconColor>
    </variables>
+   <variables ifSubset="color-scheme:oled|noir-oled">
+      <backgroundColor>000000</backgroundColor>
+      <!-- System View -->
+      <systemBackgroundColor>000000</systemBackgroundColor>
+      <systemCarouselBackgroundColor>000000</systemCarouselBackgroundColor>
+      <systemArtColor>ffffff</systemArtColor>
+      <systemArtSaturation>1</systemArtSaturation>
+      <systemArtFade>00000044</systemArtFade>
+      <systemMaskColor>111111</systemMaskColor>
+      <systemLogoColor>eeeeee</systemLogoColor>
+      <!-- Gamelist View - List Variants -->
+      <gamelistListTextlistBackgroundColor>000000</gamelistListTextlistBackgroundColor>
+      <gamelistListLogoColor>ffffffaa</gamelistListLogoColor>
+      <gamelistListTextlistSelectedColor>ffffff</gamelistListTextlistSelectedColor>
+      <gamelistListTextlistUnselectedColor>ffffff33</gamelistListTextlistUnselectedColor>
+      <gamelistListMetadataBackgroundColor>000000</gamelistListMetadataBackgroundColor>
+      <gamelistListMetadataColor>ffffff55</gamelistListMetadataColor>
+      <gamelistListMetadataIconColor>ffffff22</gamelistListMetadataIconColor>
+      <gamelistListDescriptionColor>ffffffee</gamelistListDescriptionColor>
+      <gamelistListRatingColor>ffffff44</gamelistListRatingColor>
+      <!-- Help System -->
+      <helpBackgroundColor>000000</helpBackgroundColor>
+      <helpIconColor>ffffff66</helpIconColor>
+      <helpTextColor>ffffff66</helpTextColor>
+      <!-- Menu System -->
+      <menuBackgroundColor>111111</menuBackgroundColor>
+      <statusBarBackgroundColor>000000</statusBarBackgroundColor>
+      <statusBarIconColor>eeeeee</statusBarIconColor>
+   </variables>
+   <variables ifSubset="color-scheme:oled">
+      <artworkSource>artwork</artworkSource>
+   </variables>
+   <variables ifSubset="color-scheme:noir-oled">
+      <artworkSource>artwork-noir</artworkSource>
+   </variables>
 </theme>

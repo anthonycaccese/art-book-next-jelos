@@ -30,11 +30,13 @@ license:       creative commons CC-BY-NC-SA
    <!-- Color Scheme -->
    <subset name="color-scheme" displayName="Color Scheme">
       <include name="art-book-next" displayName="Art Book Next" />
+      <include name="noir" displayName="Noir" />
       <include name="art-book" displayName="Art Book" />
       <include name="steam-os" displayName="Steam OS" />
       <include name="snes" displayName="SNES" />
       <include name="famicom" displayName="Famicom" />
-      <include name="noir" displayName="Noir" />
+      <include name="oled" displayName="OLED" />
+      <include name="noir-oled" displayName="Noir + OLED" />
       <include name="custom" displayName="Custom" />
    </subset>
    <include>./colors.xml</include>
